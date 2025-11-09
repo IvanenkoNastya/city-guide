@@ -1,4 +1,5 @@
 #pragma once
+#include "managers/UserManager.h"
 
 namespace cityguide {
 
@@ -34,6 +35,10 @@ namespace cityguide {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Button^ buttonShowCurrentUser;
+	protected:
+
+	protected:
 
 	private:
 		/// <summary>
@@ -48,12 +53,47 @@ namespace cityguide {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"CityGuide";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->buttonShowCurrentUser = (gcnew System::Windows::Forms::Button());
+			this->SuspendLayout();
+			// 
+			// buttonShowCurrentUser
+			// 
+			this->buttonShowCurrentUser->Location = System::Drawing::Point(22, 22);
+			this->buttonShowCurrentUser->Name = L"buttonShowCurrentUser";
+			this->buttonShowCurrentUser->Size = System::Drawing::Size(75, 23);
+			this->buttonShowCurrentUser->TabIndex = 0;
+			this->buttonShowCurrentUser->Text = L"ShowMyself";
+			this->buttonShowCurrentUser->UseVisualStyleBackColor = true;
+			this->buttonShowCurrentUser->Click += gcnew System::EventHandler(this, &CityGuideForm::buttonShowCurrentUser_Click);
+			// 
+			// CityGuideForm
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(284, 261);
+			this->Controls->Add(this->buttonShowCurrentUser);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
+			this->Name = L"CityGuideForm";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->Text = L"CityGuide";
+			this->ResumeLayout(false);
+
 		}
 #pragma endregion
+	private:
+		System::Void buttonShowCurrentUser_Click(System::Object^ sender, System::EventArgs^ e) {
+			String^ infoText =
+				"My name is "
+				+ UserManager::Current->CurrentUser->Username
+				+ "\nMy password is "
+				+ UserManager::Current->CurrentUser->Password
+				+ "\nI am ";
+			if (UserManager::Current->CurrentUser->IsAdmin) {
+				infoText += "Admin";
+			} else {
+				infoText += "User";
+			}
+			MessageBox::Show(infoText , "User Info", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
 	};
 }

@@ -1,0 +1,4 @@
+admin:hjgklhg password
+admin:default-username password
+user:uname password
+user:user2name pw
