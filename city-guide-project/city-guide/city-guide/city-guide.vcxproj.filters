@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CityGuide.cpp">
+    <ClCompile Include="FormCityGuide.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FormLoading.cpp">
@@ -30,9 +30,18 @@
     <ClCompile Include="Program.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FormUserManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormHelp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormUserAddOrEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CityGuide.h">
+    <ClInclude Include="FormCityGuide.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FormLoading.h">
@@ -45,6 +54,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="managers\UserManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormUserManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormHelp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormUserAddOrEdit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

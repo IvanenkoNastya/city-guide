@@ -1,4 +1,5 @@
-#include "FormLoading.h"
+#include "FormCityGuide.h"
+#include "FormLogin.h"
 #include "managers/UserManager.h"
 
 using namespace System;
@@ -10,8 +11,12 @@ using namespace cityguide;
 int main(array<String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	cityguide::FormLoading form;
-	Application::Run(% form);
+
+	FormLogin^ formLogin = gcnew FormLogin();
+	if (formLogin->ShowDialog() == DialogResult::OK) {
+		cityguide::FormCityGuide form;
+		Application::Run(% form);
+	}
 	return 0;
 }
 

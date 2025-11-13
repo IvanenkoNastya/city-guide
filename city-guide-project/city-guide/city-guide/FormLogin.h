@@ -1,6 +1,6 @@
 #pragma once
 #include <fstream>
-#include "CityGuide.h"
+#include "FormCityGuide.h"
 #include "models/User.h"
 #include "managers/UserManager.h"
 
@@ -22,7 +22,7 @@ namespace cityguide {
 		FormLogin(void)
 		{
 			InitializeComponent();
-			UserManager::Current->LoadUsers();
+			UserManager::Instance->LoadUsersFromFile();
 		}
 
 	protected:
@@ -157,15 +157,14 @@ namespace cityguide {
 		System::Void buttonLogIn_Click(System::Object^ sender, System::EventArgs^ e) {
 			String^ username = textBoxUsername->Text;
 			String^ password = textBoxPassword->Text;
-			bool foundUser = UserManager::Current->TryLogin(username, password);
+			bool foundUser = UserManager::Instance->TryLogin(username, password);
 			if (!foundUser) {
 				MessageBox::Show("Failed to login", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				this->Close();
 				return;
-			} else {
-				CityGuideForm^ newForm = gcnew CityGuideForm();
-				newForm->Show();
-				this->Hide();
 			}
+			this->DialogResult = System::Windows::Forms::DialogResult::OK;
+			this->Close();
 		}
 };
 }

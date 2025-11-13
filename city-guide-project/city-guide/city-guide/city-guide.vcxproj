@@ -120,14 +120,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CityGuide.cpp" />
+    <ClCompile Include="FormCityGuide.cpp" />
+    <ClCompile Include="FormHelp.cpp" />
     <ClCompile Include="FormLoading.cpp" />
     <ClCompile Include="FormLogin.cpp" />
+    <ClCompile Include="FormUserAddOrEdit.cpp" />
+    <ClCompile Include="FormUserManager.cpp" />
     <ClCompile Include="models\User.cpp" />
     <ClCompile Include="Program.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CityGuide.h">
+    <ClInclude Include="FormCityGuide.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormHelp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FormLoading.h">
@@ -136,18 +142,33 @@
     <ClInclude Include="FormLogin.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="FormUserAddOrEdit.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormUserManager.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="managers\UserManager.h" />
     <ClInclude Include="models\User.h" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CityGuide.resx">
-      <DependentUpon>CityGuide.h</DependentUpon>
+    <EmbeddedResource Include="FormCityGuide.resx">
+      <DependentUpon>FormCityGuide.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHelp.resx">
+      <DependentUpon>FormHelp.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLoading.resx">
       <DependentUpon>FormLoading.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserAddOrEdit.resx">
+      <DependentUpon>FormUserAddOrEdit.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserManager.resx">
+      <DependentUpon>FormUserManager.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
