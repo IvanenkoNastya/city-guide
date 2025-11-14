@@ -24,9 +24,6 @@
     <ClCompile Include="FormLogin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="models\User.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Program.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -63,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FormUserAddOrEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="models\Transport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

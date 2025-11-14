@@ -126,7 +126,6 @@
     <ClCompile Include="FormLogin.cpp" />
     <ClCompile Include="FormUserAddOrEdit.cpp" />
     <ClCompile Include="FormUserManager.cpp" />
-    <ClCompile Include="models\User.cpp" />
     <ClCompile Include="Program.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +148,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="managers\UserManager.h" />
+    <ClInclude Include="models\Transport.h" />
     <ClInclude Include="models\User.h" />
   </ItemGroup>
   <ItemGroup>

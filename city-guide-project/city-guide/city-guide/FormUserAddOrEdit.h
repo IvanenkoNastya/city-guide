@@ -37,14 +37,14 @@ namespace cityguide {
 				Text = "Edit user";
 				buttonSave->Click += gcnew System::EventHandler(this, &FormUserAddOrEdit::buttonSaveEdit_Click);
 				buttonSave->Text = "Edit";
-				userToEdit = UserManager::Instance->FindUser(userToEditStr);
+				User^ userToEdit = UserManager::Instance->FindUserByInfo(userToEditStr);
 				Text += " " + userToEdit->Username;
 
 				checkBoxIsAdmin->Checked = userToEdit->IsAdmin;
 				textBoxUsername->Text = userToEdit->Username;
 				textBoxPassword->Text = userToEdit->Password;
 
-
+				usernameToEdit = userToEditStr;
 			}
 		}
 
@@ -69,7 +69,7 @@ namespace cityguide {
 	private: System::Windows::Forms::Button^ buttonSave;
 
 
-	private: User^ userToEdit = nullptr;
+	private: String^ usernameToEdit = nullptr;
 
 	private:
 		/// <summary>
@@ -181,22 +181,29 @@ namespace cityguide {
 	}
 
 	private: System::Void buttonSaveAdd_Click(System::Object^ sender, System::EventArgs^ e) {
-		// add user
-		
-		// save to file
-
-		this->DialogResult = System::Windows::Forms::DialogResult::OK;
+		if (UserManager::Instance->TryAddUser(
+			checkBoxIsAdmin->Checked,
+			textBoxUsername->Text,
+			textBoxPassword->Text
+		)) {
+			this->DialogResult = System::Windows::Forms::DialogResult::OK;
+		} else {
+			MessageBox::Show("Couldn't add user", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
 		this->Close();
 	}
 
 	private: System::Void buttonSaveEdit_Click(System::Object^ sender, System::EventArgs^ e) {
-		userToEdit->IsAdmin = checkBoxIsAdmin->Checked;
-		userToEdit->Username = textBoxUsername->Text;
-		userToEdit->Password = textBoxPassword->Text;
-
-		// save to file
-
-		this->DialogResult = System::Windows::Forms::DialogResult::OK;
+		if (UserManager::Instance->TryEditUser(
+			usernameToEdit,
+			checkBoxIsAdmin->Checked,
+			textBoxUsername->Text,
+			textBoxPassword->Text
+		)) {
+			this->DialogResult = System::Windows::Forms::DialogResult::OK;
+		} else {
+			MessageBox::Show("Couldn't edit user", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
 		this->Close();
 	}
 };

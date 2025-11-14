@@ -64,13 +64,21 @@ public:
 		return res;
 	}
 
-	User^ FindUser(String^ userInfo) {
+	User^ FindUserByInfo(String^ userInfo) {
 		if (userInfo == nullptr) {
 			return nullptr;
 		}
 		String^ usernameToFind = userInfo->Split(':')[1];
-		for each (User ^ user in _usersList) {
-			if (user->Username == usernameToFind) {
+		return FindUserByUsername(usernameToFind);
+	}
+
+
+	User^ FindUserByUsername(String^ username) {
+		if (username == nullptr) {
+			return nullptr;
+		}
+		for each (User^ user in _usersList) {
+			if (user->Username == username) {
 				return user;
 			}
 		}
@@ -78,7 +86,7 @@ public:
 	}
 
 	bool TryDeleteUser(String^ userInfo) {
-		User^ userToDelete = FindUser(userInfo);
+		User^ userToDelete = FindUserByInfo(userInfo);
 		if (userToDelete == nullptr) {
 			return false;
 		}
@@ -86,6 +94,28 @@ public:
 			return false;
 		}
 		_usersList->Remove(userToDelete);
+		UpdateFileWithUsers();
+		return true;
+	}
+
+	bool TryAddUser(bool isAdmin, String^ username, String^ password) {
+		User^ newUser = gcnew User(isAdmin, username, password);
+		if (FindUserByUsername(username) != nullptr) {
+			return false;
+		}
+		_usersList->Add(newUser);
+		UpdateFileWithUsers();
+		return true;
+	}
+
+	bool TryEditUser(String^ userinfoToEdit, bool isAdmin, String^ username, String^ password) {
+		User^ userToEdit = FindUserByInfo(userinfoToEdit);
+		if (userToEdit == nullptr || FindUserByUsername(username) != nullptr) {
+			return false;
+		}
+		userToEdit->IsAdmin = isAdmin;
+		userToEdit->Username = username;
+		userToEdit->Password = password;
 		UpdateFileWithUsers();
 		return true;
 	}
@@ -116,5 +146,4 @@ private:
 			}
 		}
 	}
-
 };
