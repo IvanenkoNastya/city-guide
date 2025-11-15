@@ -22,7 +22,6 @@ namespace cityguide {
 		FormLogin(void)
 		{
 			InitializeComponent();
-			UserManager::Instance->LoadUsersFromFile();
 		}
 
 	protected:

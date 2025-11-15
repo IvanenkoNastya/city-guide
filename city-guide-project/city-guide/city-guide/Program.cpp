@@ -1,6 +1,7 @@
 #include "Forms/FormCityGuide.h"
 #include "Forms/Login/FormLogin.h"
 #include "managers/UserManager.h"
+#include "managers/TransportManager.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -11,6 +12,9 @@ using namespace cityguide;
 int main(array<String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
+
+	TransportManager::Instance->LoadTransportsFromFile();
+	UserManager::Instance->LoadUsersFromFile();
 
 	FormLogin^ formLogin = gcnew FormLogin();
 	if (formLogin->ShowDialog() == DialogResult::OK) {

@@ -44,7 +44,7 @@ namespace cityguide {
 				textBoxUsername->Text = userToEdit->Username;
 				textBoxPassword->Text = userToEdit->Password;
 
-				usernameToEdit = userToEditStr;
+				_usernameToEdit = userToEditStr;
 			}
 		}
 
@@ -69,7 +69,7 @@ namespace cityguide {
 	private: System::Windows::Forms::Button^ buttonSave;
 
 
-	private: String^ usernameToEdit = nullptr;
+	private: String^ _usernameToEdit = nullptr;
 
 	private:
 		/// <summary>
@@ -138,7 +138,7 @@ namespace cityguide {
 			// 
 			// buttonCancel
 			// 
-			this->buttonCancel->Location = System::Drawing::Point(197, 147);
+			this->buttonCancel->Location = System::Drawing::Point(197, 149);
 			this->buttonCancel->Name = L"buttonCancel";
 			this->buttonCancel->Size = System::Drawing::Size(75, 23);
 			this->buttonCancel->TabIndex = 5;
@@ -148,7 +148,7 @@ namespace cityguide {
 			// 
 			// buttonSave
 			// 
-			this->buttonSave->Location = System::Drawing::Point(16, 147);
+			this->buttonSave->Location = System::Drawing::Point(12, 149);
 			this->buttonSave->Name = L"buttonSave";
 			this->buttonSave->Size = System::Drawing::Size(75, 23);
 			this->buttonSave->TabIndex = 6;
@@ -195,7 +195,7 @@ namespace cityguide {
 
 	private: System::Void buttonSaveEdit_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (UserManager::Instance->TryEditUser(
-			usernameToEdit,
+			_usernameToEdit,
 			checkBoxIsAdmin->Checked,
 			textBoxUsername->Text,
 			textBoxPassword->Text

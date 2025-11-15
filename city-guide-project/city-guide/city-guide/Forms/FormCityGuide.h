@@ -1,6 +1,7 @@
 #pragma once
 #include "../managers/UserManager.h"
 #include "UserManagement/FormUserManager.h"
+#include "TransportManagement/FormTransport.h"
 #include "Login/FormLogin.h"
 #include "FormHelp.h"
 
@@ -46,8 +47,10 @@ namespace cityguide {
 	private: System::Windows::Forms::Label^ labelMenu;
 	private: System::Windows::Forms::Button^ buttonManageUsers;
 	private: System::Windows::Forms::Panel^ panelGeneral;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ buttonManageTransport;
+
+	private: System::Windows::Forms::Button^ buttonManageInstitutions;
+
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	private: System::Windows::Forms::ToolStripMenuItem^ helpToolStripMenuItem;
 
@@ -71,8 +74,8 @@ namespace cityguide {
 			this->panelMenuAll = (gcnew System::Windows::Forms::Panel());
 			this->panelGeneral = (gcnew System::Windows::Forms::Panel());
 			this->panelAdmin = (gcnew System::Windows::Forms::Panel());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->buttonManageTransport = (gcnew System::Windows::Forms::Button());
+			this->buttonManageInstitutions = (gcnew System::Windows::Forms::Button());
 			this->buttonManageUsers = (gcnew System::Windows::Forms::Button());
 			this->labelMenu = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
@@ -101,8 +104,8 @@ namespace cityguide {
 			// 
 			// panelAdmin
 			// 
-			this->panelAdmin->Controls->Add(this->button2);
-			this->panelAdmin->Controls->Add(this->button1);
+			this->panelAdmin->Controls->Add(this->buttonManageTransport);
+			this->panelAdmin->Controls->Add(this->buttonManageInstitutions);
 			this->panelAdmin->Controls->Add(this->buttonManageUsers);
 			this->panelAdmin->Location = System::Drawing::Point(239, 43);
 			this->panelAdmin->Name = L"panelAdmin";
@@ -110,23 +113,24 @@ namespace cityguide {
 			this->panelAdmin->TabIndex = 3;
 			this->panelAdmin->Visible = false;
 			// 
-			// button2
+			// buttonManageTransport
 			// 
-			this->button2->Location = System::Drawing::Point(15, 109);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(179, 23);
-			this->button2->TabIndex = 2;
-			this->button2->Text = L"Manage transport";
-			this->button2->UseVisualStyleBackColor = true;
+			this->buttonManageTransport->Location = System::Drawing::Point(15, 109);
+			this->buttonManageTransport->Name = L"buttonManageTransport";
+			this->buttonManageTransport->Size = System::Drawing::Size(179, 23);
+			this->buttonManageTransport->TabIndex = 2;
+			this->buttonManageTransport->Text = L"Manage transport";
+			this->buttonManageTransport->UseVisualStyleBackColor = true;
+			this->buttonManageTransport->Click += gcnew System::EventHandler(this, &FormCityGuide::buttonManageTransport_Click);
 			// 
-			// button1
+			// buttonManageInstitutions
 			// 
-			this->button1->Location = System::Drawing::Point(15, 80);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(179, 23);
-			this->button1->TabIndex = 1;
-			this->button1->Text = L"Manage institutions";
-			this->button1->UseVisualStyleBackColor = true;
+			this->buttonManageInstitutions->Location = System::Drawing::Point(15, 80);
+			this->buttonManageInstitutions->Name = L"buttonManageInstitutions";
+			this->buttonManageInstitutions->Size = System::Drawing::Size(179, 23);
+			this->buttonManageInstitutions->TabIndex = 1;
+			this->buttonManageInstitutions->Text = L"Manage institutions";
+			this->buttonManageInstitutions->UseVisualStyleBackColor = true;
 			// 
 			// buttonManageUsers
 			// 
@@ -199,5 +203,9 @@ namespace cityguide {
 		form->ShowDialog();
 	}
 
+	private: System::Void buttonManageTransport_Click(System::Object^ sender, System::EventArgs^ e) {
+		FormTransport^ form = gcnew FormTransport();
+		form->ShowDialog();
+	}
 };
 }

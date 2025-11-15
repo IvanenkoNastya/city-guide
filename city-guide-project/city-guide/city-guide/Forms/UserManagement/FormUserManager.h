@@ -71,9 +71,9 @@ namespace cityguide {
 			// listBoxUsers
 			// 
 			this->listBoxUsers->FormattingEnabled = true;
-			this->listBoxUsers->Location = System::Drawing::Point(12, 36);
+			this->listBoxUsers->Location = System::Drawing::Point(12, 51);
 			this->listBoxUsers->Name = L"listBoxUsers";
-			this->listBoxUsers->Size = System::Drawing::Size(282, 225);
+			this->listBoxUsers->Size = System::Drawing::Size(341, 238);
 			this->listBoxUsers->TabIndex = 0;
 			this->listBoxUsers->SelectedIndexChanged += gcnew System::EventHandler(this, &FormUserManager::listBoxUsers_SelectedIndexChanged);
 			// 
@@ -114,7 +114,7 @@ namespace cityguide {
 			// 
 			// buttonCancel
 			// 
-			this->buttonCancel->Location = System::Drawing::Point(396, 310);
+			this->buttonCancel->Location = System::Drawing::Point(409, 310);
 			this->buttonCancel->Name = L"buttonCancel";
 			this->buttonCancel->Size = System::Drawing::Size(75, 23);
 			this->buttonCancel->TabIndex = 2;

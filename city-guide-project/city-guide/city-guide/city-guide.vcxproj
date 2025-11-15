@@ -113,6 +113,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -129,38 +132,40 @@
     <ClInclude Include="Forms\Login\FormLogin.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Forms\TransportManagement\FormTransport.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Forms\TransportManagement\FormTransportAddOrEdit.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Forms\UserManagement\FormUserAddOrEdit.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Forms\UserManagement\FormUserManager.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="managers\TransportManager.h" />
     <ClInclude Include="managers\UserManager.h" />
     <ClInclude Include="models\Transport.h" />
     <ClInclude Include="models\User.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Forms\FormCityGuide.resx">
-      <DependentUpon>FormCityGuide.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormHelp.resx">
-      <DependentUpon>FormHelp.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Login\FormLogin.resx">
-      <DependentUpon>FormLogin.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserManagement\FormUserAddOrEdit.resx">
-      <DependentUpon>FormUserAddOrEdit.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserManagement\FormUserManager.resx">
-      <DependentUpon>FormUserManager.h</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <CopyFileToFolders Include="users.txt">
       <FileType>Document</FileType>
     </CopyFileToFolders>
+    <None Include="transports.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Program.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\TransportManagement\FormTransportAddOrEdit.resx">
+      <DependentUpon>Forms\TransportManagement\FormTransportAddOrEdit.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserManagement\FormUserAddOrEdit.resx">
+      <DependentUpon>Forms\UserManagement\FormUserAddOrEdit.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

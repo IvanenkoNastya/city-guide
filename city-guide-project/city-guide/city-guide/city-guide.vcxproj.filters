@@ -15,46 +15,50 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Program.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Forms\TransportManagement\MyForm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="FormCityGuide.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FormLogin.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="models\User.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="managers\UserManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FormUserManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FormHelp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FormUserAddOrEdit.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="models\Transport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Forms\TransportManagement\MyForm.h">
+    <ClInclude Include="Forms\FormCityGuide.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forms\FormHelp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forms\Login\FormLogin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forms\UserManagement\FormUserAddOrEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forms\UserManagement\FormUserManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="managers\TransportManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forms\TransportManagement\FormTransport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forms\TransportManagement\FormTransportAddOrEdit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="transports.json" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="users.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Program.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
