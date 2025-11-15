@@ -1,5 +1,5 @@
-#include "FormCityGuide.h"
-#include "FormLogin.h"
+#include "Forms/FormCityGuide.h"
+#include "Forms/Login/FormLogin.h"
 #include "managers/UserManager.h"
 
 using namespace System;

@@ -1,8 +1,8 @@
 #pragma once
 #include <fstream>
-#include "FormCityGuide.h"
-#include "models/User.h"
-#include "managers/UserManager.h"
+#include "../FormCityGuide.h"
+#include "../../models/User.h"
+#include "../../managers/UserManager.h"
 
 namespace cityguide {
 

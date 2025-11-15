@@ -120,31 +120,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FormCityGuide.cpp" />
-    <ClCompile Include="FormHelp.cpp" />
-    <ClCompile Include="FormLoading.cpp" />
-    <ClCompile Include="FormLogin.cpp" />
-    <ClCompile Include="FormUserAddOrEdit.cpp" />
-    <ClCompile Include="FormUserManager.cpp" />
-    <ClCompile Include="Program.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="FormCityGuide.h">
+    <ClInclude Include="Forms\FormCityGuide.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="FormHelp.h">
+    <ClInclude Include="Forms\FormHelp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="FormLoading.h">
+    <ClInclude Include="Forms\Login\FormLogin.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="FormLogin.h">
+    <ClInclude Include="Forms\UserManagement\FormUserAddOrEdit.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="FormUserAddOrEdit.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="FormUserManager.h">
+    <ClInclude Include="Forms\UserManagement\FormUserManager.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="managers\UserManager.h" />
@@ -152,22 +140,19 @@
     <ClInclude Include="models\User.h" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FormCityGuide.resx">
+    <EmbeddedResource Include="Forms\FormCityGuide.resx">
       <DependentUpon>FormCityGuide.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormHelp.resx">
+    <EmbeddedResource Include="Forms\FormHelp.resx">
       <DependentUpon>FormHelp.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLoading.resx">
-      <DependentUpon>FormLoading.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
+    <EmbeddedResource Include="Forms\Login\FormLogin.resx">
       <DependentUpon>FormLogin.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUserAddOrEdit.resx">
+    <EmbeddedResource Include="Forms\UserManagement\FormUserAddOrEdit.resx">
       <DependentUpon>FormUserAddOrEdit.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUserManager.resx">
+    <EmbeddedResource Include="Forms\UserManagement\FormUserManager.resx">
       <DependentUpon>FormUserManager.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

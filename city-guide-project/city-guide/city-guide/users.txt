@@ -3,7 +3,7 @@ admin:unameAdmin password
 user:uname1 password
 user:uname2fgj password
 user:uname2fghjfghjfghj password
-user:person passwordasdf
+user:person3 passwordasdf
 admin:yyyyyy password
 user:uname2 password
 user:noLongerAdmin sdfg

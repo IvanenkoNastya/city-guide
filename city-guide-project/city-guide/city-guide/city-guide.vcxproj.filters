@@ -15,33 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FormCityGuide.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FormLoading.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FormLogin.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Program.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FormUserManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FormHelp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FormUserAddOrEdit.cpp">
+    <ClCompile Include="Forms\TransportManagement\MyForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FormCityGuide.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FormLoading.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FormLogin.h">
@@ -63,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="models\Transport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forms\TransportManagement\MyForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

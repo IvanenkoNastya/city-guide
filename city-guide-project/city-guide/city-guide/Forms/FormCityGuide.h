@@ -1,7 +1,7 @@
 #pragma once
-#include "managers/UserManager.h"
-#include "FormUserManager.h"
-#include "FormLogin.h"
+#include "../managers/UserManager.h"
+#include "UserManagement/FormUserManager.h"
+#include "Login/FormLogin.h"
 #include "FormHelp.h"
 
 namespace cityguide {
