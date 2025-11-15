@@ -1,5 +1,6 @@
 #pragma once
 #include "../models/Transport.h"
+
 using namespace System;
 using namespace System::Collections::Generic;
 using namespace System::IO;
@@ -8,26 +9,7 @@ using namespace Newtonsoft::Json;
 ref class TransportManager {
 public:
 	static TransportManager^ Instance = gcnew TransportManager();
-	static String^ fileName;
-
-	TransportManager() {
-		fileName = "transports.json";
-		/*_transportsList->Add(gcnew Transport("12", Transport::TransportTypeEnum::Bus));
-		_transportsList->Add(gcnew Transport("13", Transport::TransportTypeEnum::Bus));
-		_transportsList->Add(gcnew Transport("14", Transport::TransportTypeEnum::Bus));
-		_transportsList->Add(gcnew Transport("15", Transport::TransportTypeEnum::Bus));
-		_transportsList->Add(gcnew Transport("15A", Transport::TransportTypeEnum::Bus));
-		_transportsList->Add(gcnew Transport("3", Transport::TransportTypeEnum::Trolleybus));
-		_transportsList->Add(gcnew Transport("4", Transport::TransportTypeEnum::Trolleybus));
-		_transportsList->Add(gcnew Transport("5", Transport::TransportTypeEnum::Trolleybus));
-		_transportsList->Add(gcnew Transport("125", Transport::TransportTypeEnum::Tram));
-		_transportsList->Add(gcnew Transport("218", Transport::TransportTypeEnum::Tram));
-		_transportsList->Add(gcnew Transport("1", Transport::TransportTypeEnum::Ferry));
-		_transportsList->Add(gcnew Transport("Emergency", Transport::TransportTypeEnum::Helicopter));
-		_transportsList->Add(gcnew Transport("2", Transport::TransportTypeEnum::Funicular));
-		_transportsList->Add(gcnew Transport("3", Transport::TransportTypeEnum::Funicular));*/
-		/*UpdateFileWithTransports();*/
-	}
+	static String^ fileName = "transports.json";
 
 	void LoadTransportsFromFile() {
 		try {

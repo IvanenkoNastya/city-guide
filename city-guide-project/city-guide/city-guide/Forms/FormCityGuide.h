@@ -2,6 +2,7 @@
 #include "../managers/UserManager.h"
 #include "UserManagement/FormUserManager.h"
 #include "TransportManagement/FormTransport.h"
+#include "DistrictsManagement/FormDistrict.h"
 #include "Login/FormLogin.h"
 #include "FormHelp.h"
 
@@ -53,6 +54,8 @@ namespace cityguide {
 
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	private: System::Windows::Forms::ToolStripMenuItem^ helpToolStripMenuItem;
+	private: System::Windows::Forms::Button^ buttonManageDistricts;
+
 
 	protected:
 
@@ -80,6 +83,7 @@ namespace cityguide {
 			this->labelMenu = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->buttonManageDistricts = (gcnew System::Windows::Forms::Button());
 			this->panelMenuAll->SuspendLayout();
 			this->panelAdmin->SuspendLayout();
 			this->menuStrip1->SuspendLayout();
@@ -104,6 +108,7 @@ namespace cityguide {
 			// 
 			// panelAdmin
 			// 
+			this->panelAdmin->Controls->Add(this->buttonManageDistricts);
 			this->panelAdmin->Controls->Add(this->buttonManageTransport);
 			this->panelAdmin->Controls->Add(this->buttonManageInstitutions);
 			this->panelAdmin->Controls->Add(this->buttonManageUsers);
@@ -115,20 +120,20 @@ namespace cityguide {
 			// 
 			// buttonManageTransport
 			// 
-			this->buttonManageTransport->Location = System::Drawing::Point(15, 109);
+			this->buttonManageTransport->Location = System::Drawing::Point(15, 79);
 			this->buttonManageTransport->Name = L"buttonManageTransport";
 			this->buttonManageTransport->Size = System::Drawing::Size(179, 23);
-			this->buttonManageTransport->TabIndex = 2;
+			this->buttonManageTransport->TabIndex = 1;
 			this->buttonManageTransport->Text = L"Manage transport";
 			this->buttonManageTransport->UseVisualStyleBackColor = true;
 			this->buttonManageTransport->Click += gcnew System::EventHandler(this, &FormCityGuide::buttonManageTransport_Click);
 			// 
 			// buttonManageInstitutions
 			// 
-			this->buttonManageInstitutions->Location = System::Drawing::Point(15, 80);
+			this->buttonManageInstitutions->Location = System::Drawing::Point(15, 137);
 			this->buttonManageInstitutions->Name = L"buttonManageInstitutions";
 			this->buttonManageInstitutions->Size = System::Drawing::Size(179, 23);
-			this->buttonManageInstitutions->TabIndex = 1;
+			this->buttonManageInstitutions->TabIndex = 4;
 			this->buttonManageInstitutions->Text = L"Manage institutions";
 			this->buttonManageInstitutions->UseVisualStyleBackColor = true;
 			// 
@@ -166,6 +171,16 @@ namespace cityguide {
 			this->helpToolStripMenuItem->Size = System::Drawing::Size(44, 20);
 			this->helpToolStripMenuItem->Text = L"Help";
 			this->helpToolStripMenuItem->Click += gcnew System::EventHandler(this, &FormCityGuide::helpToolStripMenuItem_Click);
+			// 
+			// buttonManageDistricts
+			// 
+			this->buttonManageDistricts->Location = System::Drawing::Point(15, 108);
+			this->buttonManageDistricts->Name = L"buttonManageDistricts";
+			this->buttonManageDistricts->Size = System::Drawing::Size(179, 23);
+			this->buttonManageDistricts->TabIndex = 2;
+			this->buttonManageDistricts->Text = L"Manage districts";
+			this->buttonManageDistricts->UseVisualStyleBackColor = true;
+			this->buttonManageDistricts->Click += gcnew System::EventHandler(this, &FormCityGuide::buttonManageDistricts_Click);
 			// 
 			// FormCityGuide
 			// 
@@ -205,6 +220,11 @@ namespace cityguide {
 
 	private: System::Void buttonManageTransport_Click(System::Object^ sender, System::EventArgs^ e) {
 		FormTransport^ form = gcnew FormTransport();
+		form->ShowDialog();
+	}
+
+	private: System::Void buttonManageDistricts_Click(System::Object^ sender, System::EventArgs^ e) {
+		FormDistrict^ form = gcnew FormDistrict();
 		form->ShowDialog();
 	}
 };

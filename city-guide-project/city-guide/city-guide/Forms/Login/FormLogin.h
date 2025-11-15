@@ -118,7 +118,7 @@ namespace cityguide {
 			// 
 			this->textBoxPassword->Location = System::Drawing::Point(7, 20);
 			this->textBoxPassword->Name = L"textBoxPassword";
-			this->textBoxPassword->PasswordChar = '?';
+			this->textBoxPassword->PasswordChar = '*';
 			this->textBoxPassword->Size = System::Drawing::Size(190, 20);
 			this->textBoxPassword->TabIndex = 1;
 			this->textBoxPassword->Text = L"password";

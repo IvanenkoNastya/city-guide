@@ -48,6 +48,15 @@
     <ClInclude Include="Forms\TransportManagement\FormTransportAddOrEdit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Forms\DistrictsManagement\FormDistrict.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forms\DistrictsManagement\FormDistrictAddOrEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="managers\DistrictManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
