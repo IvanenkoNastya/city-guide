@@ -32,6 +32,10 @@ public:
 		return TransportType.ToString() + ": " + Name;
 	}
 
+	virtual bool Equals(const Transport ^ other) override {
+		return Name == other->Name && TransportType == other->TransportType;
+	}
+
 	static TransportTypeEnum GetTranportTypeEnum(String^ transportTypeStr) {
 		TransportTypeEnum result;
 		if (!Enum::TryParse<TransportTypeEnum>(transportTypeStr, result)) {

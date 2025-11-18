@@ -1,0 +1,94 @@
+[
+  {
+    "$type": "Lighthouse, city-guide",
+    "Name": "Green lighthouse",
+    "InstitutionType": 1,
+    "TransportList": [
+      {
+        "Name": "1",
+        "TransportType": 7
+      },
+      {
+        "Name": "Emergency",
+        "TransportType": 8
+      }
+    ],
+    "District": "Lake"
+  },
+  {
+    "$type": "Wharf, city-guide",
+    "Name": "Small Wharf",
+    "InstitutionType": 2,
+    "TransportList": [
+      {
+        "Name": "14",
+        "TransportType": 1
+      },
+      {
+        "Name": "1",
+        "TransportType": 7
+      },
+      {
+        "Name": "Emergency",
+        "TransportType": 8
+      },
+      {
+        "Name": "3",
+        "TransportType": 6
+      }
+    ],
+    "District": "Lake"
+  },
+  {
+    "$type": "Museum, city-guide",
+    "Name": "Open sky museum",
+    "InstitutionType": 3,
+    "TransportList": [
+      {
+        "Name": "13",
+        "TransportType": 1
+      },
+      {
+        "Name": "14",
+        "TransportType": 1
+      },
+      {
+        "Name": "5",
+        "TransportType": 4
+      },
+      {
+        "Name": "Emergency",
+        "TransportType": 8
+      }
+    ],
+    "District": "District 2"
+  },
+  {
+    "$type": "Theatre, city-guide",
+    "Name": "Main theatre",
+    "InstitutionType": 4,
+    "TransportList": [
+      {
+        "Name": "14",
+        "TransportType": 1
+      },
+      {
+        "Name": "15",
+        "TransportType": 1
+      },
+      {
+        "Name": "5",
+        "TransportType": 4
+      },
+      {
+        "Name": "3",
+        "TransportType": 6
+      },
+      {
+        "Name": "33333",
+        "TransportType": 3
+      }
+    ],
+    "District": "District 2"
+  }
+]

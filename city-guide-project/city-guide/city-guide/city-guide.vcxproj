@@ -135,6 +135,12 @@
     <ClInclude Include="Forms\FormHelp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Forms\InstitutionsManagement\FormInstitution.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Forms\InstitutionsManagement\FormInstitutionAddOrEdit.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Forms\Login\FormLogin.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -151,8 +157,20 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="managers\DistrictManager.h" />
+    <ClInclude Include="managers\InstitutionManager.h" />
     <ClInclude Include="managers\TransportManager.h" />
     <ClInclude Include="managers\UserManager.h" />
+    <ClInclude Include="models\Institutions\Airport.h" />
+    <ClInclude Include="models\Institutions\Hospital.h" />
+    <ClInclude Include="models\Institutions\Institution.h" />
+    <ClInclude Include="models\Institutions\Library.h" />
+    <ClInclude Include="models\Institutions\Lighthouse.h" />
+    <ClInclude Include="models\Institutions\Mall.h" />
+    <ClInclude Include="models\Institutions\Museum.h" />
+    <ClInclude Include="models\Institutions\Restaurant.h" />
+    <ClInclude Include="models\Institutions\School.h" />
+    <ClInclude Include="models\Institutions\Theatre.h" />
+    <ClInclude Include="models\Institutions\Wharf.h" />
     <ClInclude Include="models\Transport.h" />
     <ClInclude Include="models\User.h" />
   </ItemGroup>
@@ -176,6 +194,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCityGuide.resx">
       <DependentUpon>Forms\FormCityGuide.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InstitutionsManagement\FormInstitution.resx">
+      <DependentUpon>Forms\InstitutionsManagement\FormInstitution.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InstitutionsManagement\FormInstitutionAddOrEdit.resx">
+      <DependentUpon>Forms\InstitutionsManagement\FormInstitutionAddOrEdit.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login\FormLogin.resx">
       <DependentUpon>Forms\Login\FormLogin.h</DependentUpon>
