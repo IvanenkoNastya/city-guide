@@ -5,6 +5,7 @@
 #include "DistrictsManagement/FormDistrict.h"
 #include "InstitutionsManagement/FormInstitution.h"
 #include "FindAddress/FormFindAddress.h"
+#include "FindTransportByPlaces/FormFindTransportByPlaces.h"
 #include "Login/FormLogin.h"
 #include "FormHelp.h"
 
@@ -84,6 +85,8 @@ namespace cityguide {
 		{
 			this->panelMenuAll = (gcnew System::Windows::Forms::Panel());
 			this->panelGeneral = (gcnew System::Windows::Forms::Panel());
+			this->buttonFindAddress = (gcnew System::Windows::Forms::Button());
+			this->buttonFindTransportByPlaces = (gcnew System::Windows::Forms::Button());
 			this->panelAdmin = (gcnew System::Windows::Forms::Panel());
 			this->buttonManageDistricts = (gcnew System::Windows::Forms::Button());
 			this->buttonManageTransport = (gcnew System::Windows::Forms::Button());
@@ -92,8 +95,6 @@ namespace cityguide {
 			this->labelMenu = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->buttonFindTransportByPlaces = (gcnew System::Windows::Forms::Button());
-			this->buttonFindAddress = (gcnew System::Windows::Forms::Button());
 			this->panelMenuAll->SuspendLayout();
 			this->panelGeneral->SuspendLayout();
 			this->panelAdmin->SuspendLayout();
@@ -118,6 +119,26 @@ namespace cityguide {
 			this->panelGeneral->Name = L"panelGeneral";
 			this->panelGeneral->Size = System::Drawing::Size(229, 190);
 			this->panelGeneral->TabIndex = 4;
+			// 
+			// buttonFindAddress
+			// 
+			this->buttonFindAddress->Location = System::Drawing::Point(29, 109);
+			this->buttonFindAddress->Name = L"buttonFindAddress";
+			this->buttonFindAddress->Size = System::Drawing::Size(179, 23);
+			this->buttonFindAddress->TabIndex = 2;
+			this->buttonFindAddress->Text = L"Find institution address";
+			this->buttonFindAddress->UseVisualStyleBackColor = true;
+			this->buttonFindAddress->Click += gcnew System::EventHandler(this, &FormCityGuide::buttonFindAddress_Click);
+			// 
+			// buttonFindTransportByPlaces
+			// 
+			this->buttonFindTransportByPlaces->Location = System::Drawing::Point(29, 50);
+			this->buttonFindTransportByPlaces->Name = L"buttonFindTransportByPlaces";
+			this->buttonFindTransportByPlaces->Size = System::Drawing::Size(179, 52);
+			this->buttonFindTransportByPlaces->TabIndex = 1;
+			this->buttonFindTransportByPlaces->Text = L"Find transport to get from one institution to another";
+			this->buttonFindTransportByPlaces->UseVisualStyleBackColor = true;
+			this->buttonFindTransportByPlaces->Click += gcnew System::EventHandler(this, &FormCityGuide::buttonFindTransportByPlaces_Click);
 			// 
 			// panelAdmin
 			// 
@@ -196,25 +217,6 @@ namespace cityguide {
 			this->helpToolStripMenuItem->Text = L"Help";
 			this->helpToolStripMenuItem->Click += gcnew System::EventHandler(this, &FormCityGuide::helpToolStripMenuItem_Click);
 			// 
-			// buttonFindTransportByPlaces
-			// 
-			this->buttonFindTransportByPlaces->Location = System::Drawing::Point(29, 50);
-			this->buttonFindTransportByPlaces->Name = L"buttonFindTransportByPlaces";
-			this->buttonFindTransportByPlaces->Size = System::Drawing::Size(179, 52);
-			this->buttonFindTransportByPlaces->TabIndex = 1;
-			this->buttonFindTransportByPlaces->Text = L"Find transport to get from one institution to another";
-			this->buttonFindTransportByPlaces->UseVisualStyleBackColor = true;
-			// 
-			// buttonFindAddress
-			// 
-			this->buttonFindAddress->Location = System::Drawing::Point(29, 109);
-			this->buttonFindAddress->Name = L"buttonFindAddress";
-			this->buttonFindAddress->Size = System::Drawing::Size(179, 23);
-			this->buttonFindAddress->TabIndex = 2;
-			this->buttonFindAddress->Text = L"Find institution address";
-			this->buttonFindAddress->UseVisualStyleBackColor = true;
-			this->buttonFindAddress->Click += gcnew System::EventHandler(this, &FormCityGuide::buttonFindAddress_Click);
-			// 
 			// FormCityGuide
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -226,7 +228,7 @@ namespace cityguide {
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"FormCityGuide";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"CityGuide";
+			this->Text = L"City Guide";
 			this->panelMenuAll->ResumeLayout(false);
 			this->panelMenuAll->PerformLayout();
 			this->panelGeneral->ResumeLayout(false);
@@ -269,6 +271,11 @@ namespace cityguide {
 
 	private: System::Void buttonFindAddress_Click(System::Object^ sender, System::EventArgs^ e) {
 		FormFindAddress^ form = gcnew FormFindAddress();
+		form->ShowDialog();
+	}
+
+	private: System::Void buttonFindTransportByPlaces_Click(System::Object^ sender, System::EventArgs^ e) {
+		FormFindTransportByPlaces^ form = gcnew FormFindTransportByPlaces();
 		form->ShowDialog();
 	}
 };

@@ -11,14 +11,6 @@
       {
         "Name": "Emergency",
         "TransportType": 8
-      },
-      {
-        "Name": "1",
-        "TransportType": 7
-      },
-      {
-        "Name": "Emergency",
-        "TransportType": 8
       }
     ],
     "District": "Lake",
@@ -34,20 +26,8 @@
         "TransportType": 1
       },
       {
-        "Name": "1",
-        "TransportType": 7
-      },
-      {
-        "Name": "Emergency",
-        "TransportType": 8
-      },
-      {
-        "Name": "3",
-        "TransportType": 6
-      },
-      {
-        "Name": "14",
-        "TransportType": 1
+        "Name": "4",
+        "TransportType": 4
       },
       {
         "Name": "1",
@@ -85,22 +65,6 @@
       {
         "Name": "Emergency",
         "TransportType": 8
-      },
-      {
-        "Name": "13",
-        "TransportType": 1
-      },
-      {
-        "Name": "14",
-        "TransportType": 1
-      },
-      {
-        "Name": "5",
-        "TransportType": 4
-      },
-      {
-        "Name": "Emergency",
-        "TransportType": 8
       }
     ],
     "District": "North",
@@ -111,42 +75,6 @@
     "Name": "Opera theatre",
     "InstitutionType": 4,
     "TransportList": [
-      {
-        "Name": "14",
-        "TransportType": 1
-      },
-      {
-        "Name": "15",
-        "TransportType": 1
-      },
-      {
-        "Name": "5",
-        "TransportType": 4
-      },
-      {
-        "Name": "3",
-        "TransportType": 6
-      },
-      {
-        "Name": "33333",
-        "TransportType": 3
-      },
-      {
-        "Name": "14",
-        "TransportType": 1
-      },
-      {
-        "Name": "15",
-        "TransportType": 1
-      },
-      {
-        "Name": "5",
-        "TransportType": 4
-      },
-      {
-        "Name": "3",
-        "TransportType": 6
-      },
       {
         "Name": "14",
         "TransportType": 1
@@ -243,18 +171,6 @@
     "Name": "International airport",
     "InstitutionType": 7,
     "TransportList": [
-      {
-        "Name": "15",
-        "TransportType": 1
-      },
-      {
-        "Name": "15A",
-        "TransportType": 1
-      },
-      {
-        "Name": "Emergency",
-        "TransportType": 8
-      },
       {
         "Name": "15",
         "TransportType": 1

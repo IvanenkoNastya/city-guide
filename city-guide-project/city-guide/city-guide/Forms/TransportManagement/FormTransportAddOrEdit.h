@@ -119,6 +119,7 @@ namespace cityguide {
 			// 
 			// comboBoxType
 			// 
+			this->comboBoxType->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBoxType->FormattingEnabled = true;
 			this->comboBoxType->Location = System::Drawing::Point(100, 36);
 			this->comboBoxType->Name = L"comboBoxType";

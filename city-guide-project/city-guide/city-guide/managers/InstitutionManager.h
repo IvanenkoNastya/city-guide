@@ -87,6 +87,23 @@ public:
 		return false;
 	}
 
+	List<Transport^>^ GetTransportList(Institution^ institutionFrom, Institution^ institutionTo) {
+		List<Transport^>^ transports = gcnew List<Transport^>();
+		for each (Transport^ fromTransport in institutionFrom->TransportList) {
+			for each (Transport^ toTransport in institutionTo->TransportList) {
+				if (fromTransport->Equals(toTransport)) {
+					if (! transports->Contains(fromTransport)) {
+						transports->Add(fromTransport);
+					}
+				}
+			}
+		}
+
+		return transports;
+		//return transports->Distinct()->ToList<Transport^>();
+		//return gcnew HashSet<Transport^>(transports)->ToList();
+	}
+
 private:
 	List<Institution^>^ _institutionsList = gcnew List<Institution^>();
 

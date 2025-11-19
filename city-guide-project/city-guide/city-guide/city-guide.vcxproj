@@ -132,6 +132,9 @@
     <ClInclude Include="Forms\FindAddress\FormFindAddress.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Forms\FindTransportByPlaces\FormFindTransportByPlaces.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Forms\FormCityGuide.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -198,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FindAddress\FormFindAddress.resx">
       <DependentUpon>Forms\FindAddress\FormFindAddress.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindTransportByPlaces\FormFindTransportByPlaces.resx">
+      <DependentUpon>Forms\FindTransportByPlaces\FormFindTransportByPlaces.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCityGuide.resx">
       <DependentUpon>Forms\FormCityGuide.h</DependentUpon>

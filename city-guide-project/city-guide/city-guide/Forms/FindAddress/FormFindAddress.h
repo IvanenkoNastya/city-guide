@@ -21,9 +21,12 @@ namespace cityguide {
 		FormFindAddress(void)
 		{
 			InitializeComponent();
+
 			comboBoxDistrict->Items->Add(_allDistrictsString);
 			comboBoxDistrict->Items->AddRange(DistrictManager::Instance->GetDistrictList()->ToArray());
 		
+			comboBoxDistrict->Text = _allDistrictsString;
+
 			RefreshInstitutionListBox();
 		}
 
@@ -52,6 +55,7 @@ namespace cityguide {
 		/// Required designer variable.
 		/// </summary>
 		System::ComponentModel::Container ^components;
+	private: System::Windows::Forms::Label^ label1;
 
 	private:
 		String^ _allDistrictsString = " - All - ";
@@ -67,6 +71,7 @@ namespace cityguide {
 			this->buttonCancel = (gcnew System::Windows::Forms::Button());
 			this->buttonSeeAddress = (gcnew System::Windows::Forms::Button());
 			this->comboBoxDistrict = (gcnew System::Windows::Forms::ComboBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// listBoxInstitutions
@@ -77,6 +82,7 @@ namespace cityguide {
 			this->listBoxInstitutions->Size = System::Drawing::Size(472, 251);
 			this->listBoxInstitutions->TabIndex = 0;
 			this->listBoxInstitutions->SelectedIndexChanged += gcnew System::EventHandler(this, &FormFindAddress::listBox1_SelectedIndexChanged);
+			this->listBoxInstitutions->DoubleClick += gcnew System::EventHandler(this, &FormFindAddress::buttonSeeAddress_Click);
 			// 
 			// buttonCancel
 			// 
@@ -91,28 +97,39 @@ namespace cityguide {
 			// buttonSeeAddress
 			// 
 			this->buttonSeeAddress->Enabled = false;
-			this->buttonSeeAddress->Location = System::Drawing::Point(409, 24);
+			this->buttonSeeAddress->Location = System::Drawing::Point(384, 26);
 			this->buttonSeeAddress->Name = L"buttonSeeAddress";
-			this->buttonSeeAddress->Size = System::Drawing::Size(75, 23);
+			this->buttonSeeAddress->Size = System::Drawing::Size(100, 23);
 			this->buttonSeeAddress->TabIndex = 2;
-			this->buttonSeeAddress->Text = L"See address";
+			this->buttonSeeAddress->Text = L"Show address";
 			this->buttonSeeAddress->UseVisualStyleBackColor = true;
 			this->buttonSeeAddress->Click += gcnew System::EventHandler(this, &FormFindAddress::buttonSeeAddress_Click);
 			// 
 			// comboBoxDistrict
 			// 
+			this->comboBoxDistrict->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBoxDistrict->FormattingEnabled = true;
-			this->comboBoxDistrict->Location = System::Drawing::Point(12, 24);
+			this->comboBoxDistrict->Location = System::Drawing::Point(12, 26);
 			this->comboBoxDistrict->Name = L"comboBoxDistrict";
 			this->comboBoxDistrict->Size = System::Drawing::Size(180, 21);
 			this->comboBoxDistrict->TabIndex = 14;
 			this->comboBoxDistrict->SelectedIndexChanged += gcnew System::EventHandler(this, &FormFindAddress::comboBoxDistrict_SelectedIndexChanged);
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(12, 9);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(70, 13);
+			this->label1->TabIndex = 15;
+			this->label1->Text = L"Select district";
 			// 
 			// FormFindAddress
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(496, 345);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->comboBoxDistrict);
 			this->Controls->Add(this->buttonSeeAddress);
 			this->Controls->Add(this->buttonCancel);
@@ -122,6 +139,7 @@ namespace cityguide {
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Find Address of Institution";
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -166,10 +184,10 @@ namespace cityguide {
 
 		String^ header = selectedInstitution->Name;
 		StringBuilder^ sb = gcnew StringBuilder();
-		sb->Append("Address of ");
+		sb->Append("Address of \"");
 		sb->Append(selectedInstitution->Name);
-		sb->Append(" is:");
-		sb->Append("\n");
+		sb->Append("\":");
+		sb->Append("\n\n");
 		sb->Append(selectedInstitution->Address);
 
 		String^ text = sb->ToString();

@@ -20,9 +20,6 @@ namespace cityguide {
 		FormInstitutionAddOrEdit(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 		FormInstitutionAddOrEdit(Institution^ selectedInstitution) {
@@ -159,6 +156,7 @@ namespace cityguide {
 			// 
 			// comboBoxDistrict
 			// 
+			this->comboBoxDistrict->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBoxDistrict->FormattingEnabled = true;
 			this->comboBoxDistrict->Location = System::Drawing::Point(92, 38);
 			this->comboBoxDistrict->Name = L"comboBoxDistrict";
@@ -309,6 +307,7 @@ namespace cityguide {
 		baseInstitution->Address = textBoxAddress->Text;
 		baseInstitution->InstitutionType = _institutionType;
 		baseInstitution->District = comboBoxDistrict->Text;
+		baseInstitution->TransportList->Clear();
 		for each (Object^ transport in checkedListBoxTransport->CheckedItems) {
 			baseInstitution->TransportList->Add(dynamic_cast<Transport^>(transport));
 		}
@@ -378,6 +377,7 @@ namespace cityguide {
 		_selectedInstitution->Address = textBoxAddress->Text;
 		_selectedInstitution->InstitutionType = _institutionType;
 		_selectedInstitution->District = comboBoxDistrict->Text;
+		_selectedInstitution->TransportList->Clear();
 		for each (Object ^ transport in checkedListBoxTransport->CheckedItems) {
 			_selectedInstitution->TransportList->Add(dynamic_cast<Transport^>(transport));
 		}
