@@ -71,7 +71,7 @@ namespace cityguide {
 			// listBoxDistricts
 			// 
 			this->listBoxDistricts->FormattingEnabled = true;
-			this->listBoxDistricts->Location = System::Drawing::Point(12, 52);
+			this->listBoxDistricts->Location = System::Drawing::Point(12, 53);
 			this->listBoxDistricts->MultiColumn = true;
 			this->listBoxDistricts->Name = L"listBoxDistricts";
 			this->listBoxDistricts->Size = System::Drawing::Size(472, 251);
@@ -103,7 +103,7 @@ namespace cityguide {
 			// addDistrictToolStripMenuItem
 			// 
 			this->addDistrictToolStripMenuItem->Name = L"addDistrictToolStripMenuItem";
-			this->addDistrictToolStripMenuItem->Size = System::Drawing::Size(117, 20);
+			this->addDistrictToolStripMenuItem->Size = System::Drawing::Size(106, 20);
 			this->addDistrictToolStripMenuItem->Text = L"Add new District";
 			this->addDistrictToolStripMenuItem->Click += gcnew System::EventHandler(this, &FormDistrict::addDistrictToolStripMenuItem_Click);
 			// 
@@ -111,7 +111,7 @@ namespace cityguide {
 			// 
 			this->editDistrictToolStripMenuItem->Enabled = false;
 			this->editDistrictToolStripMenuItem->Name = L"editDistrictToolStripMenuItem";
-			this->editDistrictToolStripMenuItem->Size = System::Drawing::Size(90, 20);
+			this->editDistrictToolStripMenuItem->Size = System::Drawing::Size(79, 20);
 			this->editDistrictToolStripMenuItem->Text = L"Edit District";
 			this->editDistrictToolStripMenuItem->Click += gcnew System::EventHandler(this, &FormDistrict::editDistrictToolStripMenuItem_Click);
 			// 
@@ -119,7 +119,7 @@ namespace cityguide {
 			// 
 			this->deleteDistrictToolStripMenuItem->Enabled = false;
 			this->deleteDistrictToolStripMenuItem->Name = L"deleteDistrictToolStripMenuItem";
-			this->deleteDistrictToolStripMenuItem->Size = System::Drawing::Size(103, 20);
+			this->deleteDistrictToolStripMenuItem->Size = System::Drawing::Size(92, 20);
 			this->deleteDistrictToolStripMenuItem->Text = L"Delete District";
 			this->deleteDistrictToolStripMenuItem->Click += gcnew System::EventHandler(this, &FormDistrict::deleteDistrictToolStripMenuItem_Click);
 			// 

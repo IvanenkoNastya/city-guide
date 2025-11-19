@@ -59,13 +59,29 @@
       {
         "Name": "Emergency",
         "TransportType": 8
+      },
+      {
+        "Name": "13",
+        "TransportType": 1
+      },
+      {
+        "Name": "14",
+        "TransportType": 1
+      },
+      {
+        "Name": "5",
+        "TransportType": 4
+      },
+      {
+        "Name": "Emergency",
+        "TransportType": 8
       }
     ],
-    "District": "District 2"
+    "District": "North"
   },
   {
     "$type": "Theatre, city-guide",
-    "Name": "Main theatre",
+    "Name": "Opera theatre",
     "InstitutionType": 4,
     "TransportList": [
       {
@@ -87,8 +103,133 @@
       {
         "Name": "33333",
         "TransportType": 3
+      },
+      {
+        "Name": "14",
+        "TransportType": 1
+      },
+      {
+        "Name": "15",
+        "TransportType": 1
+      },
+      {
+        "Name": "5",
+        "TransportType": 4
+      },
+      {
+        "Name": "3",
+        "TransportType": 6
+      },
+      {
+        "Name": "14",
+        "TransportType": 1
+      },
+      {
+        "Name": "15",
+        "TransportType": 1
+      },
+      {
+        "Name": "5",
+        "TransportType": 4
+      },
+      {
+        "Name": "3",
+        "TransportType": 6
       }
     ],
-    "District": "District 2"
+    "District": "Downtown"
+  },
+  {
+    "$type": "Library, city-guide",
+    "Name": "Future and the past",
+    "InstitutionType": 5,
+    "TransportList": [
+      {
+        "Name": "12",
+        "TransportType": 1
+      },
+      {
+        "Name": "14",
+        "TransportType": 1
+      },
+      {
+        "Name": "5",
+        "TransportType": 3
+      }
+    ],
+    "District": "New Place"
+  },
+  {
+    "$type": "Hospital, city-guide",
+    "Name": "Medical care",
+    "InstitutionType": 6,
+    "TransportList": [
+      {
+        "Name": "13",
+        "TransportType": 1
+      },
+      {
+        "Name": "3",
+        "TransportType": 4
+      },
+      {
+        "Name": "125",
+        "TransportType": 2
+      },
+      {
+        "Name": "218",
+        "TransportType": 2
+      },
+      {
+        "Name": "Emergency",
+        "TransportType": 8
+      },
+      {
+        "Name": "7",
+        "TransportType": 3
+      }
+    ],
+    "District": "East"
+  },
+  {
+    "$type": "Airport, city-guide",
+    "IsInternational": false,
+    "Name": "International airport",
+    "InstitutionType": 7,
+    "TransportList": [
+      {
+        "Name": "15",
+        "TransportType": 1
+      },
+      {
+        "Name": "15A",
+        "TransportType": 1
+      },
+      {
+        "Name": "Emergency",
+        "TransportType": 8
+      },
+      {
+        "Name": "15",
+        "TransportType": 1
+      },
+      {
+        "Name": "15A",
+        "TransportType": 1
+      },
+      {
+        "Name": "Emergency",
+        "TransportType": 8
+      },
+      {
+        "Name": "Intercity PurpleCity-GreenCity",
+        "TransportType": 1
+      },
+      {
+        "Name": "Intercity GreenCity-OrangeCity",
+        "TransportType": 1
+      }
+    ],
+    "District": "North"
   }
 ]

@@ -28,7 +28,9 @@ namespace cityguide {
 			InitializeComponent();
 
 			for each (Object^ transportType in Enum::GetValues(Transport::TransportTypeEnum::typeid)) {
-				comboBoxType->Items->Add(transportType);
+				if ((Transport::TransportTypeEnum)transportType != Transport::TransportTypeEnum::Unknown) {
+					comboBoxType->Items->Add(transportType);
+				}
 			}
 
 			if (selectedTransport == nullptr) {

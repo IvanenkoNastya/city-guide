@@ -176,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="districts.json" />
+    <None Include="institutions.json" />
     <None Include="packages.config" />
     <CopyFileToFolders Include="users.txt">
       <FileType>Document</FileType>
@@ -195,6 +196,9 @@
     <EmbeddedResource Include="Forms\FormCityGuide.resx">
       <DependentUpon>Forms\FormCityGuide.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormHelp.resx">
+      <DependentUpon>Forms\FormHelp.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\InstitutionsManagement\FormInstitution.resx">
       <DependentUpon>Forms\InstitutionsManagement\FormInstitution.h</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +214,12 @@
     <EmbeddedResource Include="Forms\UserManagement\FormUserAddOrEdit.resx">
       <DependentUpon>Forms\UserManagement\FormUserAddOrEdit.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserManagement\FormUserManager.resx">
+      <DependentUpon>Forms\UserManagement\FormUserManager.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="helpData.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -73,7 +73,7 @@ namespace cityguide {
 			this->listBoxUsers->FormattingEnabled = true;
 			this->listBoxUsers->Location = System::Drawing::Point(12, 51);
 			this->listBoxUsers->Name = L"listBoxUsers";
-			this->listBoxUsers->Size = System::Drawing::Size(341, 238);
+			this->listBoxUsers->Size = System::Drawing::Size(472, 251);
 			this->listBoxUsers->TabIndex = 0;
 			this->listBoxUsers->SelectedIndexChanged += gcnew System::EventHandler(this, &FormUserManager::listBoxUsers_SelectedIndexChanged);
 			// 

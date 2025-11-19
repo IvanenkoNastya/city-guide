@@ -8,6 +8,7 @@ namespace cityguide {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Text;
 
 	/// <summary>
 	/// Summary for FormHelp
@@ -18,9 +19,8 @@ namespace cityguide {
 		FormHelp(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
+
+			LoadHelpDaraFromFile();
 		}
 
 	protected:
@@ -55,10 +55,11 @@ namespace cityguide {
 			// 
 			// richTextBoxHelp
 			// 
+			this->richTextBoxHelp->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->richTextBoxHelp->Location = System::Drawing::Point(12, 12);
 			this->richTextBoxHelp->Name = L"richTextBoxHelp";
 			this->richTextBoxHelp->ReadOnly = true;
-			this->richTextBoxHelp->Size = System::Drawing::Size(260, 237);
+			this->richTextBoxHelp->Size = System::Drawing::Size(472, 321);
 			this->richTextBoxHelp->TabIndex = 0;
 			this->richTextBoxHelp->Text = L"Help\n\nThis is user guide.";
 			// 
@@ -66,7 +67,7 @@ namespace cityguide {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(284, 261);
+			this->ClientSize = System::Drawing::Size(496, 345);
 			this->Controls->Add(this->richTextBoxHelp);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
 			this->Name = L"FormHelp";
@@ -76,5 +77,22 @@ namespace cityguide {
 
 		}
 #pragma endregion
+		static String^ fileName = "helpData.txt";
+
+		void LoadHelpDaraFromFile() {
+			try {
+				StreamReader^ sr = File::OpenText(fileName);
+				richTextBoxHelp->Text = sr->ReadToEnd();
+				sr->Close();
+			} catch (Exception^ e) {
+				if (dynamic_cast<FileNotFoundException^>(e)) {
+					Console::WriteLine("file '{0}' not found", fileName);
+				} else {
+					Console::WriteLine("problem reading file '{0}'", fileName);
+				}
+			}
+		}
+
+
 	};
 }

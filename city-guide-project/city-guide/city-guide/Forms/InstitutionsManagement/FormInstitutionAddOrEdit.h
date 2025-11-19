@@ -138,9 +138,9 @@ namespace cityguide {
 			// 
 			// textBoxName
 			// 
-			this->textBoxName->Location = System::Drawing::Point(100, 12);
+			this->textBoxName->Location = System::Drawing::Point(92, 12);
 			this->textBoxName->Name = L"textBoxName";
-			this->textBoxName->Size = System::Drawing::Size(172, 20);
+			this->textBoxName->Size = System::Drawing::Size(180, 20);
 			this->textBoxName->TabIndex = 10;
 			// 
 			// label1
@@ -155,23 +155,23 @@ namespace cityguide {
 			// comboBoxDistrict
 			// 
 			this->comboBoxDistrict->FormattingEnabled = true;
-			this->comboBoxDistrict->Location = System::Drawing::Point(151, 38);
+			this->comboBoxDistrict->Location = System::Drawing::Point(92, 38);
 			this->comboBoxDistrict->Name = L"comboBoxDistrict";
-			this->comboBoxDistrict->Size = System::Drawing::Size(121, 21);
+			this->comboBoxDistrict->Size = System::Drawing::Size(180, 21);
 			this->comboBoxDistrict->TabIndex = 13;
 			// 
 			// checkedListBoxTransport
 			// 
 			this->checkedListBoxTransport->FormattingEnabled = true;
-			this->checkedListBoxTransport->Location = System::Drawing::Point(100, 71);
+			this->checkedListBoxTransport->Location = System::Drawing::Point(16, 86);
 			this->checkedListBoxTransport->Name = L"checkedListBoxTransport";
-			this->checkedListBoxTransport->Size = System::Drawing::Size(172, 229);
+			this->checkedListBoxTransport->Size = System::Drawing::Size(256, 214);
 			this->checkedListBoxTransport->TabIndex = 14;
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(12, 80);
+			this->label2->Location = System::Drawing::Point(13, 70);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(52, 13);
 			this->label2->TabIndex = 15;

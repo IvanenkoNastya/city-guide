@@ -110,7 +110,10 @@ public:
 
 	bool TryEditUser(String^ userinfoToEdit, bool isAdmin, String^ username, String^ password) {
 		User^ userToEdit = FindUserByInfo(userinfoToEdit);
-		if (userToEdit == nullptr || FindUserByUsername(username) != nullptr) {
+		if (userToEdit == nullptr) {
+			return false;
+		}
+		if (FindUserByUsername(username) != nullptr && userToEdit->Username != username) {
 			return false;
 		}
 		userToEdit->IsAdmin = isAdmin;

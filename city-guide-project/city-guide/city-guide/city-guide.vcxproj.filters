@@ -104,6 +104,7 @@
     <None Include="packages.config" />
     <None Include="transports.json" />
     <None Include="districts.json" />
+    <None Include="institutions.json" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="users.txt" />
@@ -112,5 +113,8 @@
     <ClCompile Include="Program.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="helpData.txt" />
   </ItemGroup>
 </Project>

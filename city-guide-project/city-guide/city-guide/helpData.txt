@@ -1,0 +1,81 @@
+	Help
+
+You can see the verse that can help to guess some passwords for usernames existing in the database in the end of this instruction.
+
+This instruction provides information about possible ways of using this application.
+
+All general-user function are possible to reach at the left side of the main menu.
+Admin users get more options such as creating, editing and deleting users, institutions, districts and transports that are positioned at the right side of the main menu.
+
+Login process is the same regardless the admin status of the user.
+User instruction for login:
+- enter your username to the entry field positioned right after "username" label
+- enter your password to the "password" entry field
+	- see the menu form after your data is validated
+	- try again if the login is declined, or edit manually database to be able to login
+
+User instruction for general-purpose functions:
+- click "help" at the strip menu at the menu form to see this "help" instruction (however, if you're already here, you probably don't need to read this list item)
+
+- filter, sort (!todo this instruction)
+
+
+User instruction for admin-only functions:
+- to manipulate with one of the objects (this includes editing databases connected to the application).
+(note that you can not create already existing object)
+	- click at button with name of object to manipulate with
+	- to add new instance:
+		- at the strip menu at the top click "add"
+		- fill all fields and other types of input
+		- click "Save" to save or "Close" to discard changes
+
+	- to edit an instance:
+		- click at the object you want to change in the list
+		- at the strip menu at the top click "edit"
+		- change the fields and other types of input
+		- click "Save" to save or "Close" to discard changes
+
+	- to delete an instance:
+		- click at the object you want to change in the list
+		- at the strip menu at the top click "delete"
+		- click "Yes" to confirm deleting or "No" discard removal
+
+
+	"Usernames"
+
+"quiet-squirrel", "foggy-frog",
+"white-koala", "fish", and "oak",
+"leo-zebra", "brutal-fox",
+"poltergeist", "red-bear", "goat-ghost".
+
+one "no-longer-" is "-admin",
+or "magnolia-jasmine".
+hyphen's part of many names
+cause you can't apply the space.
+
+others' passwords are just free
+if you're admin: add and see:
+user "walnut123"
+with the password "one-two-three"
+
+"camel-snake-pascal-kebab"
+guess password for user such,
+it's as simple as just "case",
+or they made it deep and strange?
+
+user "guava-apricor"
+smells the same as fresh boycott.
+"purple-fish" and "orange-shark"
+try to spark an ocean's darks.
+
+also "user-to-delete"
+is created to feel free
+while destroying work of me
+cause I'd save here all of these.
+
+"lemon-orange-mango-tree"
+leads all other "plants-and-bees",
+"snowy-yew" and "winter-time"
+dance together just to shine.
+
+19.11.2025
