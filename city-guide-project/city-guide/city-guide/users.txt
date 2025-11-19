@@ -5,7 +5,7 @@ user:purple-fish ocean
 user:magnolia-jasmine tree-flower
 user:walnut123 one-two-three
 admin:oak tree
-user:guava-apricor strange-smell
+user:guava-apricot strange-smell
 user:no-longer-admin admin-no
 user:white-koala white
 user:camel-snake-pascal-kebab case

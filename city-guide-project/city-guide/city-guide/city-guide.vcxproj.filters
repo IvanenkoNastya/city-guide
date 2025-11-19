@@ -99,6 +99,9 @@
     <ClInclude Include="models\Institutions\Wharf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Forms\FindAddress\FormFindAddress.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -22,12 +22,14 @@ public:
 	InstitutionTypeEnum InstitutionType;
 	List<Transport^>^ TransportList;
 	String^ District;
+	String^ Address;
 
 	Institution() {
 		Name = "";
 		InstitutionType = InstitutionTypeEnum::Unknown;
 		TransportList = gcnew List<Transport^>();
 		District = "";
+		Address = "";
 	}
 
 	Institution(String^ name, InstitutionTypeEnum institutionType) {
@@ -35,6 +37,7 @@ public:
 		InstitutionType = institutionType;
 		TransportList = gcnew List<Transport^>();
 		District = "";
+		Address = "";
 	}
 
 	virtual String^ ToString() override {

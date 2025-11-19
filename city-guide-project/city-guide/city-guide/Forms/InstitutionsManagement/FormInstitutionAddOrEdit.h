@@ -38,6 +38,7 @@ namespace cityguide {
 				buttonSave->Text = "Edit";
 
 				textBoxName->Text = selectedInstitution->Name;
+				textBoxAddress->Text = selectedInstitution->Address;
 
 				_selectedInstitution = selectedInstitution;
 				_institutionType = _selectedInstitution->InstitutionType;
@@ -84,6 +85,8 @@ namespace cityguide {
 	private: System::Windows::Forms::CheckedListBox^ checkedListBoxTransport;
 
 	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::TextBox^ textBoxAddress;
 
 	private:
 		/// <summary>
@@ -106,6 +109,8 @@ namespace cityguide {
 			this->comboBoxDistrict = (gcnew System::Windows::Forms::ComboBox());
 			this->checkedListBoxTransport = (gcnew System::Windows::Forms::CheckedListBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->textBoxAddress = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// buttonSave
@@ -163,25 +168,43 @@ namespace cityguide {
 			// checkedListBoxTransport
 			// 
 			this->checkedListBoxTransport->FormattingEnabled = true;
-			this->checkedListBoxTransport->Location = System::Drawing::Point(16, 86);
+			this->checkedListBoxTransport->Location = System::Drawing::Point(16, 116);
 			this->checkedListBoxTransport->Name = L"checkedListBoxTransport";
-			this->checkedListBoxTransport->Size = System::Drawing::Size(256, 214);
+			this->checkedListBoxTransport->Size = System::Drawing::Size(256, 184);
 			this->checkedListBoxTransport->TabIndex = 14;
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(13, 70);
+			this->label2->Location = System::Drawing::Point(13, 92);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(52, 13);
 			this->label2->TabIndex = 15;
 			this->label2->Text = L"Transport";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(13, 68);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(45, 13);
+			this->label3->TabIndex = 16;
+			this->label3->Text = L"Address";
+			// 
+			// textBoxAddress
+			// 
+			this->textBoxAddress->Location = System::Drawing::Point(92, 66);
+			this->textBoxAddress->Name = L"textBoxAddress";
+			this->textBoxAddress->Size = System::Drawing::Size(180, 20);
+			this->textBoxAddress->TabIndex = 17;
 			// 
 			// FormInstitutionAddOrEdit
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(824, 345);
+			this->Controls->Add(this->textBoxAddress);
+			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->checkedListBoxTransport);
 			this->Controls->Add(this->comboBoxDistrict);
@@ -283,6 +306,7 @@ namespace cityguide {
 		}
 
 		baseInstitution->Name = textBoxName->Text;
+		baseInstitution->Address = textBoxAddress->Text;
 		baseInstitution->InstitutionType = _institutionType;
 		baseInstitution->District = comboBoxDistrict->Text;
 		for each (Object^ transport in checkedListBoxTransport->CheckedItems) {
@@ -351,6 +375,7 @@ namespace cityguide {
 		}
 
 		_selectedInstitution->Name = textBoxName->Text;
+		_selectedInstitution->Address = textBoxAddress->Text;
 		_selectedInstitution->InstitutionType = _institutionType;
 		_selectedInstitution->District = comboBoxDistrict->Text;
 		for each (Object ^ transport in checkedListBoxTransport->CheckedItems) {

@@ -42,6 +42,16 @@ public:
 		return _institutionsList;
 	}
 
+	List<Institution^>^ GetInstitutionListByDistrict(String^ district) {
+		List<Institution^>^ institutionsInDistrict = gcnew List<Institution^>();
+		for each (Institution^ institution in _institutionsList) {
+			if (institution->District == district) {
+				institutionsInDistrict->Add(institution);
+			}
+		}
+		return institutionsInDistrict;
+	}
+
 	bool TryDeleteInstitution(Institution^ institutionToDelete) {
 		if (institutionToDelete == nullptr) {
 			return false;
@@ -69,10 +79,13 @@ public:
 	}
 
 	bool IsInstitutionExisting(String^ name, InstitutionTypeEnum type) {
-		// to do
+		for each (Institution^ institution in _institutionsList) {
+			if (institution->Name == name && institution->InstitutionType == type) {
+				return true;
+			}
+		}
 		return false;
 	}
-
 
 private:
 	List<Institution^>^ _institutionsList = gcnew List<Institution^>();

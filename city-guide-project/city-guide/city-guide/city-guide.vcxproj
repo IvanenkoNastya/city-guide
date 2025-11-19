@@ -129,6 +129,9 @@
     <ClInclude Include="Forms\DistrictsManagement\FormDistrictAddOrEdit.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Forms\FindAddress\FormFindAddress.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Forms\FormCityGuide.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -192,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DistrictsManagement\FormDistrictAddOrEdit.resx">
       <DependentUpon>Forms\DistrictsManagement\FormDistrictAddOrEdit.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindAddress\FormFindAddress.resx">
+      <DependentUpon>Forms\FindAddress\FormFindAddress.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCityGuide.resx">
       <DependentUpon>Forms\FormCityGuide.h</DependentUpon>

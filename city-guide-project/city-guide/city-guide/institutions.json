@@ -11,9 +11,18 @@
       {
         "Name": "Emergency",
         "TransportType": 8
+      },
+      {
+        "Name": "1",
+        "TransportType": 7
+      },
+      {
+        "Name": "Emergency",
+        "TransportType": 8
       }
     ],
-    "District": "Lake"
+    "District": "Lake",
+    "Address": "3 Lapwing street, GreenCity"
   },
   {
     "$type": "Wharf, city-guide",
@@ -35,9 +44,26 @@
       {
         "Name": "3",
         "TransportType": 6
+      },
+      {
+        "Name": "14",
+        "TransportType": 1
+      },
+      {
+        "Name": "1",
+        "TransportType": 7
+      },
+      {
+        "Name": "Emergency",
+        "TransportType": 8
+      },
+      {
+        "Name": "3",
+        "TransportType": 6
       }
     ],
-    "District": "Lake"
+    "District": "Lake",
+    "Address": "5 Lapwing street, GreenCity"
   },
   {
     "$type": "Museum, city-guide",
@@ -77,7 +103,8 @@
         "TransportType": 8
       }
     ],
-    "District": "North"
+    "District": "North",
+    "Address": ""
   },
   {
     "$type": "Theatre, city-guide",
@@ -137,7 +164,8 @@
         "TransportType": 6
       }
     ],
-    "District": "Downtown"
+    "District": "Downtown",
+    "Address": ""
   },
   {
     "$type": "Library, city-guide",
@@ -155,9 +183,26 @@
       {
         "Name": "5",
         "TransportType": 3
+      },
+      {
+        "Name": "12",
+        "TransportType": 1
+      },
+      {
+        "Name": "14",
+        "TransportType": 1
+      },
+      {
+        "Name": "4",
+        "TransportType": 4
+      },
+      {
+        "Name": "5",
+        "TransportType": 3
       }
     ],
-    "District": "New Place"
+    "District": "New Place",
+    "Address": ""
   },
   {
     "$type": "Hospital, city-guide",
@@ -189,7 +234,8 @@
         "TransportType": 3
       }
     ],
-    "District": "East"
+    "District": "East",
+    "Address": ""
   },
   {
     "$type": "Airport, city-guide",
@@ -230,6 +276,7 @@
         "TransportType": 1
       }
     ],
-    "District": "North"
+    "District": "North",
+    "Address": ""
   }
 ]

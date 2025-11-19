@@ -59,10 +59,13 @@ public:
 	}
 
 	bool IsTransportExisting(String^ name, Transport::TransportTypeEnum type) {
-		// to do
+		for each (Transport^ transport in _transportsList) {
+			if (transport->Name == name && transport->TransportType == type) {
+				return true;
+			}
+		}
 		return false;
 	}
-
 
 private:
 	List<Transport^>^ _transportsList = gcnew List<Transport^>();
