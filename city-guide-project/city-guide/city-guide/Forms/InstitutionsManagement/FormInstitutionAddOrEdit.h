@@ -84,6 +84,13 @@ namespace cityguide {
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::TextBox^ textBoxAddress;
+	private: System::Windows::Forms::TabControl^ tabControl1;
+	private: System::Windows::Forms::TabPage^ tabPage1;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::TabPage^ tabPage2;
+	private: System::Windows::Forms::TabPage^ tabPage3;
+
+
 
 	private:
 		/// <summary>
@@ -108,6 +115,13 @@ namespace cityguide {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->textBoxAddress = (gcnew System::Windows::Forms::TextBox());
+			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
+			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+			this->tabControl1->SuspendLayout();
+			this->tabPage1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// buttonSave
@@ -196,11 +210,63 @@ namespace cityguide {
 			this->textBoxAddress->Size = System::Drawing::Size(180, 20);
 			this->textBoxAddress->TabIndex = 17;
 			// 
+			// tabControl1
+			// 
+			this->tabControl1->Controls->Add(this->tabPage1);
+			this->tabControl1->Controls->Add(this->tabPage2);
+			this->tabControl1->Controls->Add(this->tabPage3);
+			this->tabControl1->Location = System::Drawing::Point(278, 12);
+			this->tabControl1->Name = L"tabControl1";
+			this->tabControl1->SelectedIndex = 0;
+			this->tabControl1->Size = System::Drawing::Size(391, 288);
+			this->tabControl1->TabIndex = 18;
+			// 
+			// tabPage1
+			// 
+			this->tabPage1->Controls->Add(this->button1);
+			this->tabPage1->Location = System::Drawing::Point(4, 22);
+			this->tabPage1->Name = L"tabPage1";
+			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage1->Size = System::Drawing::Size(383, 262);
+			this->tabPage1->TabIndex = 0;
+			this->tabPage1->Text = L"tabPage1";
+			this->tabPage1->UseVisualStyleBackColor = true;
+			// 
+			// tabPage2
+			// 
+			this->tabPage2->Location = System::Drawing::Point(4, 22);
+			this->tabPage2->Name = L"tabPage2";
+			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage2->Size = System::Drawing::Size(383, 262);
+			this->tabPage2->TabIndex = 1;
+			this->tabPage2->Text = L"tabPage2";
+			this->tabPage2->UseVisualStyleBackColor = true;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(94, 98);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
+			// tabPage3
+			// 
+			this->tabPage3->Location = System::Drawing::Point(4, 22);
+			this->tabPage3->Name = L"tabPage3";
+			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage3->Size = System::Drawing::Size(383, 262);
+			this->tabPage3->TabIndex = 2;
+			this->tabPage3->Text = L"tabPage3";
+			this->tabPage3->UseVisualStyleBackColor = true;
+			// 
 			// FormInstitutionAddOrEdit
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(824, 345);
+			this->Controls->Add(this->tabControl1);
 			this->Controls->Add(this->textBoxAddress);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
@@ -215,6 +281,8 @@ namespace cityguide {
 			this->Name = L"FormInstitutionAddOrEdit";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"FormInstitutionAddOrEdit";
+			this->tabControl1->ResumeLayout(false);
+			this->tabPage1->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -303,14 +371,17 @@ namespace cityguide {
 		}
 		}
 
-		baseInstitution->Name = textBoxName->Text;
-		baseInstitution->Address = textBoxAddress->Text;
-		baseInstitution->InstitutionType = _institutionType;
-		baseInstitution->District = comboBoxDistrict->Text;
-		baseInstitution->TransportList->Clear();
-		for each (Object^ transport in checkedListBoxTransport->CheckedItems) {
-			baseInstitution->TransportList->Add(dynamic_cast<Transport^>(transport));
+		List<Transport^>^ checkedTransports = gcnew List<Transport^>();
+		for each (Object ^ transport in checkedListBoxTransport->CheckedItems) {
+			checkedTransports->Add(dynamic_cast<Transport^>(transport));
 		}
+		baseInstitution->Update(
+			textBoxName->Text,
+			_institutionType,
+			checkedTransports,
+			comboBoxDistrict->Text,
+			textBoxAddress->Text
+		);
 
 		if (InstitutionManager::Instance->TryAddInstitution(
 			baseInstitution,
@@ -373,14 +444,17 @@ namespace cityguide {
 		}
 		}
 
-		_selectedInstitution->Name = textBoxName->Text;
-		_selectedInstitution->Address = textBoxAddress->Text;
-		_selectedInstitution->InstitutionType = _institutionType;
-		_selectedInstitution->District = comboBoxDistrict->Text;
-		_selectedInstitution->TransportList->Clear();
+		List<Transport^>^ checkedTransports = gcnew List<Transport^>();
 		for each (Object ^ transport in checkedListBoxTransport->CheckedItems) {
-			_selectedInstitution->TransportList->Add(dynamic_cast<Transport^>(transport));
+			checkedTransports->Add(dynamic_cast<Transport^>(transport));
 		}
+		_selectedInstitution->Update(
+			textBoxName->Text,
+			_institutionType,
+			checkedTransports,
+			comboBoxDistrict->Text,
+			textBoxAddress->Text
+		);
 
 		if (InstitutionManager::Instance->TryEditInstitution(
 			_selectedInstitution

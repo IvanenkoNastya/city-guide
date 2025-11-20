@@ -194,5 +194,30 @@
     ],
     "District": "North",
     "Address": ""
+  },
+  {
+    "$type": "School, city-guide",
+    "Name": "Number 100",
+    "InstitutionType": 9,
+    "TransportList": [
+      {
+        "Name": "14",
+        "TransportType": 1
+      },
+      {
+        "Name": "15",
+        "TransportType": 1
+      },
+      {
+        "Name": "15A",
+        "TransportType": 1
+      },
+      {
+        "Name": "4",
+        "TransportType": 4
+      }
+    ],
+    "District": "East",
+    "Address": "adsalgk"
   }
 ]

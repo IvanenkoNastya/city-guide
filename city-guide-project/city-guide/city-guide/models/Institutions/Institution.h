@@ -40,6 +40,20 @@ public:
 		Address = "";
 	}
 
+	void Update(
+		String^ name,
+		InstitutionTypeEnum institutionType,
+		List<Transport^>^ transportList,
+		String^ district,
+		String^ address
+		) {
+		Name = name;
+		InstitutionType = institutionType;
+		TransportList = transportList;
+		District = district;
+		Address = address;
+	}
+
 	virtual String^ ToString() override {
 		return InstitutionType.ToString() + ": " + Name;
 	}
