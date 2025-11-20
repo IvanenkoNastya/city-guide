@@ -1,7 +1,8 @@
 [
   {
     "$type": "Lighthouse, city-guide",
-    "Name": "Green lighthouse",
+    "LightColour": "green",
+    "Name": "Guider",
     "InstitutionType": 1,
     "TransportList": [
       {
@@ -14,10 +15,11 @@
       }
     ],
     "District": "Lake",
-    "Address": "3 Lapwing street, GreenCity"
+    "Address": "3 Lapwing street, Greentown"
   },
   {
     "$type": "Wharf, city-guide",
+    "NumberOfFloatingVehicles": 21,
     "Name": "Small Wharf",
     "InstitutionType": 2,
     "TransportList": [
@@ -43,10 +45,11 @@
       }
     ],
     "District": "Lake",
-    "Address": "5 Lapwing street, GreenCity"
+    "Address": "5 Lapwing street, Greentown"
   },
   {
     "$type": "Museum, city-guide",
+    "MuseumType": 4,
     "Name": "Open sky museum",
     "InstitutionType": 3,
     "TransportList": [
@@ -68,10 +71,11 @@
       }
     ],
     "District": "North",
-    "Address": ""
+    "Address": "Greentown"
   },
   {
     "$type": "Theatre, city-guide",
+    "HasOrchestra": true,
     "Name": "Opera theatre",
     "InstitutionType": 4,
     "TransportList": [
@@ -93,25 +97,14 @@
       }
     ],
     "District": "Downtown",
-    "Address": ""
+    "Address": "1 Old street, Greentown"
   },
   {
     "$type": "Library, city-guide",
+    "IsUniversityLibrary": false,
     "Name": "Future and the past",
     "InstitutionType": 5,
     "TransportList": [
-      {
-        "Name": "12",
-        "TransportType": 1
-      },
-      {
-        "Name": "14",
-        "TransportType": 1
-      },
-      {
-        "Name": "5",
-        "TransportType": 3
-      },
       {
         "Name": "12",
         "TransportType": 1
@@ -129,11 +122,12 @@
         "TransportType": 3
       }
     ],
-    "District": "New Place",
-    "Address": ""
+    "District": "East",
+    "Address": "8 Cherry street, Greentown"
   },
   {
     "$type": "Hospital, city-guide",
+    "HospitalType": 1,
     "Name": "Medical care",
     "InstitutionType": 6,
     "TransportList": [
@@ -162,13 +156,13 @@
         "TransportType": 3
       }
     ],
-    "District": "East",
-    "Address": ""
+    "District": "New Place",
+    "Address": "10 Cherry street, Greentown"
   },
   {
     "$type": "Airport, city-guide",
-    "IsInternational": false,
-    "Name": "International airport",
+    "IsInternational": true,
+    "Name": "International airport 1",
     "InstitutionType": 7,
     "TransportList": [
       {
@@ -193,11 +187,12 @@
       }
     ],
     "District": "North",
-    "Address": ""
+    "Address": "1 Large street, Greentown"
   },
   {
     "$type": "School, city-guide",
-    "Name": "Number 100",
+    "NumberOfFaculties": 2,
+    "Name": "Physics and Mathematics Lyceum Number 1",
     "InstitutionType": 9,
     "TransportList": [
       {
@@ -218,6 +213,170 @@
       }
     ],
     "District": "East",
-    "Address": "adsalgk"
+    "Address": "8 Wisdom street, Greentown"
+  },
+  {
+    "$type": "Hospital, city-guide",
+    "HospitalType": 6,
+    "Name": "Light time",
+    "InstitutionType": 6,
+    "TransportList": [
+      {
+        "Name": "14",
+        "TransportType": 1
+      },
+      {
+        "Name": "Emergency",
+        "TransportType": 8
+      }
+    ],
+    "District": "Lake",
+    "Address": "2 Lapwing street, Greentown"
+  },
+  {
+    "$type": "Library, city-guide",
+    "IsUniversityLibrary": true,
+    "Name": "GreenTown University Library",
+    "InstitutionType": 5,
+    "TransportList": [
+      {
+        "Name": "14",
+        "TransportType": 1
+      },
+      {
+        "Name": "15",
+        "TransportType": 1
+      },
+      {
+        "Name": "5",
+        "TransportType": 4
+      }
+    ],
+    "District": "East",
+    "Address": "12 Wisdom street, Greentown"
+  },
+  {
+    "$type": "Mall, city-guide",
+    "HasParking": true,
+    "HasGrocery": true,
+    "HasEntertainmentCenter": false,
+    "Name": "Great items",
+    "InstitutionType": 10,
+    "TransportList": [
+      {
+        "Name": "15",
+        "TransportType": 1
+      },
+      {
+        "Name": "4",
+        "TransportType": 4
+      },
+      {
+        "Name": "5",
+        "TransportType": 4
+      },
+      {
+        "Name": "Emergency",
+        "TransportType": 8
+      },
+      {
+        "Name": "5",
+        "TransportType": 3
+      }
+    ],
+    "District": "New Place",
+    "Address": "1 Olivetree street, Greentown"
+  },
+  {
+    "$type": "Museum, city-guide",
+    "MuseumType": 10,
+    "Name": "Greentown Natural Museum",
+    "InstitutionType": 3,
+    "TransportList": [
+      {
+        "Name": "15A",
+        "TransportType": 1
+      },
+      {
+        "Name": "4",
+        "TransportType": 4
+      },
+      {
+        "Name": "125",
+        "TransportType": 2
+      }
+    ],
+    "District": "East",
+    "Address": "6 Wisdom street, Greentown"
+  },
+  {
+    "$type": "Restaurant, city-guide",
+    "Cuisine": "Ukrainian",
+    "Name": "Varenyky",
+    "InstitutionType": 8,
+    "TransportList": [
+      {
+        "Name": "14",
+        "TransportType": 1
+      },
+      {
+        "Name": "15",
+        "TransportType": 1
+      },
+      {
+        "Name": "5",
+        "TransportType": 4
+      }
+    ],
+    "District": "Downtown",
+    "Address": "2 Old street, Greentown"
+  },
+  {
+    "$type": "School, city-guide",
+    "NumberOfFaculties": 16,
+    "Name": "Greentown University",
+    "InstitutionType": 9,
+    "TransportList": [
+      {
+        "Name": "15",
+        "TransportType": 1
+      },
+      {
+        "Name": "15A",
+        "TransportType": 1
+      },
+      {
+        "Name": "5",
+        "TransportType": 4
+      },
+      {
+        "Name": "5",
+        "TransportType": 3
+      }
+    ],
+    "District": "East",
+    "Address": "4 Wisdom street, Greentown"
+  },
+  {
+    "$type": "Theatre, city-guide",
+    "HasOrchestra": false,
+    "Name": "Drama theatre",
+    "InstitutionType": 4,
+    "TransportList": [
+      {
+        "Name": "14",
+        "TransportType": 1
+      },
+      {
+        "Name": "15",
+        "TransportType": 1
+      },
+      {
+        "Name": "5",
+        "TransportType": 4
+      }
+    ],
+    "District": "Downtown",
+    "Address": "2 Old street, Greentown"
   }
 ]

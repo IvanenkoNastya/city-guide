@@ -19,9 +19,6 @@ namespace cityguide {
 		FormTransportAddOrEdit(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 		FormTransportAddOrEdit(Transport^ selectedTransport) {

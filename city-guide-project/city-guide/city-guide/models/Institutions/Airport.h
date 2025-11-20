@@ -4,4 +4,8 @@
 ref class Airport : public Institution {
 public:
 	bool IsInternational;
+
+	void UpdateEntity(bool isInternational) {
+		IsInternational = isInternational;
+	}
 };

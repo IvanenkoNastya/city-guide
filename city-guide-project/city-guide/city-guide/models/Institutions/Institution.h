@@ -40,13 +40,13 @@ public:
 		Address = "";
 	}
 
-	void Update(
+	void UpdateBase(
 		String^ name,
 		InstitutionTypeEnum institutionType,
 		List<Transport^>^ transportList,
 		String^ district,
 		String^ address
-		) {
+	) {
 		Name = name;
 		InstitutionType = institutionType;
 		TransportList = transportList;

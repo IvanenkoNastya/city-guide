@@ -125,6 +125,7 @@ namespace cityguide {
 			this->listBoxInstitutions->Size = System::Drawing::Size(472, 251);
 			this->listBoxInstitutions->TabIndex = 1;
 			this->listBoxInstitutions->SelectedIndexChanged += gcnew System::EventHandler(this, &FormInstitution::listBoxInstitution_SelectedIndexChanged);
+			this->listBoxInstitutions->DoubleClick += gcnew System::EventHandler(this, &FormInstitution::editInstitutionToolStripMenuItem_Click);
 			// 
 			// buttonCancel
 			// 
@@ -185,6 +186,9 @@ namespace cityguide {
 	}
 
 	private: System::Void editInstitutionToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (listBoxInstitutions->SelectedItem == nullptr) {
+			return;
+		}
 		FormInstitutionAddOrEdit^ form = gcnew FormInstitutionAddOrEdit(dynamic_cast<Institution^>(listBoxInstitutions->SelectedItem));
 		if (form->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
 			RefreshInstitutionListBox();
