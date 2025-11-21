@@ -34,6 +34,7 @@ public:
 			return false;
 		}
 		_districtsList->Remove(districtToDelete);
+		InstitutionManager::Instance->DistrictChanged(districtToDelete, nullptr);
 		UpdateFileWithDistricts();
 		return true;
 	}
@@ -53,6 +54,7 @@ public:
 		}
 		int index = _districtsList->IndexOf(districtToEdit);
 		_districtsList[index] = newDistrict;
+		InstitutionManager::Instance->DistrictChanged(districtToEdit, newDistrict);
 		UpdateFileWithDistricts();
 		return true;
 	}

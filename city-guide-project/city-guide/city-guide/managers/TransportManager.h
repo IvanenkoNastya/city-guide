@@ -1,5 +1,6 @@
 #pragma once
 #include "../models/Transport.h"
+#include "../managers/InstitutionManager.h"
 
 using namespace System;
 using namespace System::Collections::Generic;
@@ -34,6 +35,7 @@ public:
 		if (transportToDelete == nullptr) {
 			return false;
 		}
+		InstitutionManager::Instance->TransportChanged(transportToDelete, nullptr, Transport::TransportTypeEnum::Unknown);
 		_transportsList->Remove(transportToDelete);
 		UpdateFileWithTransports();
 		return true;
@@ -52,8 +54,10 @@ public:
 		if (transportToEdit == nullptr || IsTransportExisting(name, type)) {
 			return false;
 		}
+		InstitutionManager::Instance->TransportChanged(transportToEdit, name, type);
 		transportToEdit->Name = name;
 		transportToEdit->TransportType = type;
+
 		UpdateFileWithTransports();
 		return true;
 	}

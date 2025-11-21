@@ -378,5 +378,19 @@
     ],
     "District": "Downtown",
     "Address": "2 Old street, Greentown"
+  },
+  {
+    "$type": "Museum, city-guide",
+    "MuseumType": 10,
+    "Name": "Far away from anything",
+    "InstitutionType": 3,
+    "TransportList": [
+      {
+        "Name": "Emergency",
+        "TransportType": 8
+      }
+    ],
+    "District": "Suburb",
+    "Address": "Suburbs of Greentown"
   }
 ]

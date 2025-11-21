@@ -1,5 +1,6 @@
 #pragma once
 #include "../../managers/TransportManager.h"
+#include "../../managers/InstitutionManager.h"
 
 namespace cityguide {
 
@@ -185,11 +186,15 @@ namespace cityguide {
 	}
 
 	private: System::Void buttonSaveEdit_Click(System::Object^ sender, System::EventArgs^ e) {
+		Transport^ oldTransport = gcnew Transport();
+		oldTransport->Name = _selectedTransport->Name;
+		oldTransport->TransportType = _selectedTransport->TransportType;
 		if (TransportManager::Instance->TryEditTransport(
 			_selectedTransport,
 			textBoxName->Text,
 			Transport::GetTranportTypeEnum(comboBoxType->Text)
 		)) {
+			//InstitutionManager::Instance->TransportChanged(oldTransport, _selectedTransport);
 			this->DialogResult = System::Windows::Forms::DialogResult::OK;
 		} else {
 			MessageBox::Show("Couldn't edit transport", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);

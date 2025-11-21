@@ -77,6 +77,7 @@ namespace cityguide {
 			this->listBoxTransports->Size = System::Drawing::Size(472, 251);
 			this->listBoxTransports->TabIndex = 0;
 			this->listBoxTransports->SelectedIndexChanged += gcnew System::EventHandler(this, &FormTransport::listBoxTransports_SelectedIndexChanged);
+			this->listBoxTransports->DoubleClick += gcnew System::EventHandler(this, &FormTransport::editTransportToolStripMenuItem_Click);
 			// 
 			// buttonCancel
 			// 
@@ -173,7 +174,6 @@ namespace cityguide {
 		}
 	}
 	private: System::Void deleteTransportToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		// to do: check if this transport is used in any institution (and do smth with it)
 		System::Windows::Forms::DialogResult answer = MessageBox::Show("Are you sure?", "Delete transport", MessageBoxButtons::YesNo, MessageBoxIcon::Question);
 		if (answer == System::Windows::Forms::DialogResult::Yes) {
 			Transport^ transportToDelete = dynamic_cast<Transport^>(listBoxTransports->SelectedItem);

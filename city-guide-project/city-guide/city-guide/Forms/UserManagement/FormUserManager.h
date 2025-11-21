@@ -76,6 +76,7 @@ namespace cityguide {
 			this->listBoxUsers->Size = System::Drawing::Size(472, 251);
 			this->listBoxUsers->TabIndex = 0;
 			this->listBoxUsers->SelectedIndexChanged += gcnew System::EventHandler(this, &FormUserManager::listBoxUsers_SelectedIndexChanged);
+			this->listBoxUsers->DoubleClick += gcnew System::EventHandler(this, &FormUserManager::editUserToolStripMenuItem_Click);
 			// 
 			// menuStrip1
 			// 

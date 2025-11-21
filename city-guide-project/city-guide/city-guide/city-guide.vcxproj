@@ -220,6 +220,9 @@
     <EmbeddedResource Include="Forms\Login\FormLogin.resx">
       <DependentUpon>Forms\Login\FormLogin.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransportManagement\FormTransport.resx">
+      <DependentUpon>Forms\TransportManagement\FormTransport.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TransportManagement\FormTransportAddOrEdit.resx">
       <DependentUpon>Forms\TransportManagement\FormTransportAddOrEdit.h</DependentUpon>
     </EmbeddedResource>

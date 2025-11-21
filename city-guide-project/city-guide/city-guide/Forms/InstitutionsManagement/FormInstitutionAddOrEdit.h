@@ -288,11 +288,11 @@ private: System::Windows::Forms::CheckBox^ checkBoxTheatreHasOrchestra;
 			this->tabControl->Controls->Add(this->tabPageSchool);
 			this->tabControl->Controls->Add(this->tabPageMall);
 			this->tabControl->Controls->Add(this->tabPageRestaurant);
-			this->tabControl->Location = System::Drawing::Point(274, 12);
+			this->tabControl->Location = System::Drawing::Point(274, 66);
 			this->tabControl->Multiline = true;
 			this->tabControl->Name = L"tabControl";
 			this->tabControl->SelectedIndex = 0;
-			this->tabControl->Size = System::Drawing::Size(210, 288);
+			this->tabControl->Size = System::Drawing::Size(210, 234);
 			this->tabControl->TabIndex = 18;
 			// 
 			// tabPageLighthouse
@@ -302,7 +302,7 @@ private: System::Windows::Forms::CheckBox^ checkBoxTheatreHasOrchestra;
 			this->tabPageLighthouse->Location = System::Drawing::Point(4, 73);
 			this->tabPageLighthouse->Name = L"tabPageLighthouse";
 			this->tabPageLighthouse->Padding = System::Windows::Forms::Padding(3);
-			this->tabPageLighthouse->Size = System::Drawing::Size(202, 211);
+			this->tabPageLighthouse->Size = System::Drawing::Size(202, 157);
 			this->tabPageLighthouse->TabIndex = 0;
 			this->tabPageLighthouse->Text = L"Lighthouse";
 			this->tabPageLighthouse->UseVisualStyleBackColor = true;

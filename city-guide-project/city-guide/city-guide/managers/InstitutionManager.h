@@ -100,9 +100,48 @@ public:
 		}
 
 		return transports;
-		//return transports->Distinct()->ToList<Transport^>();
-		//return gcnew HashSet<Transport^>(transports)->ToList();
 	}
+
+	void DistrictChanged(String^ districtOld, String^ districtNew) {
+		for each (Institution ^ institution in _institutionsList) {
+			if (institution->District == districtOld) {
+				if (districtNew == nullptr) {
+					institution->District = "";
+				} else {
+					institution->District = districtNew;
+				}
+			}
+		}
+		UpdateFileWithInstitutions();
+	}
+
+	void TransportChanged(Transport^ transportOld, String^ nameNew, Transport::TransportTypeEnum typeNew) {
+		for each (Institution ^ institution in _institutionsList) {
+			int length = institution->TransportList->Count;
+			if (nameNew == nullptr) {
+				// remove some elements
+				List<Transport^>^ transportsToRemove = gcnew List<Transport^>();
+				for each (Transport^ transport in institution->TransportList) {
+					if (transport->Equals(transportOld)) {
+						transportsToRemove->Add(transport);
+					}
+				}
+				for each (Transport^ transport in transportsToRemove) {
+					institution->TransportList->Remove(transport);
+				}
+			} else {
+				// edit some elements
+				for each (Transport^ transport in institution->TransportList) {
+					if (transport->Equals(transportOld)) {
+						transport->Name = nameNew;
+						transport->TransportType = typeNew;
+					}
+				}
+			}
+		}
+		UpdateFileWithInstitutions();
+	}
+
 
 private:
 	List<Institution^>^ _institutionsList = gcnew List<Institution^>();

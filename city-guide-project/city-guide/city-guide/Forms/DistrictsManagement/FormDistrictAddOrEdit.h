@@ -1,5 +1,6 @@
 #pragma once
 #include "../../managers/DistrictManager.h"
+#include "../../managers/InstitutionManager.h"
 
 namespace cityguide {
 

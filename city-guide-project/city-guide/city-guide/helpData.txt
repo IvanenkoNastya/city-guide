@@ -1,4 +1,6 @@
-	Help
+				Help
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 You can see the verse that can help to guess some passwords for usernames existing in the database in the end of this instruction.
 
@@ -7,6 +9,8 @@ This instruction provides information about possible ways of using this applicat
 All general-user function are possible to reach at the left side of the main menu.
 Admin users get more options such as creating, editing and deleting users, institutions, districts and transports that are positioned at the right side of the main menu.
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 Login process is the same regardless the admin status of the user.
 User instruction for login:
 - enter your username to the entry field positioned right after "username" label
@@ -14,11 +18,32 @@ User instruction for login:
 	- see the menu form after your data is validated
 	- try again if the login is declined, or edit manually database to be able to login
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 User instruction for general-purpose functions:
 - click "help" at the strip menu at the menu form to see this "help" instruction (however, if you're already here, you probably don't need to read this list item)
 
-- filter, sort (!todo this instruction)
+- to find the possible transport options when getting from one institution to another:
+	- at the main menu click "Find transport to get from one institution to another"
+	- chose starting point from the list "from" and destination point from the list "to"
+	- see results in the list below. Plan your journey!
+		- if there the list below is empty, there is no straignt connection between 
+		institutions you chose. Try to find way with intermediate points
 
+- to find address of institution:
+	- at the main menu click "Find institution address"
+		- you can see the list of all institutions now
+	- (oprional step) chose district from the dropdown list
+		- you can see the list of institutions in the selected district now
+	- to see address of the institution:
+		- select one by clicking at the institution in the list
+		- click "Show address" button
+		or
+		- double click at the institution
+
+- sort (!todo this instruction)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 User instruction for admin-only functions:
 - to manipulate with one of the objects (this includes editing databases connected to the application).
@@ -31,7 +56,7 @@ User instruction for admin-only functions:
 
 	- to edit an instance:
 		- click at the object you want to change in the list
-		- at the strip menu at the top click "edit"
+		- at the strip menu at the top click "edit" OR double click at the instance
 		- change the fields and other types of input
 		- click "Save" to save or "Close" to discard changes
 
@@ -40,6 +65,7 @@ User instruction for admin-only functions:
 		- at the strip menu at the top click "delete"
 		- click "Yes" to confirm deleting or "No" discard removal
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 	"Usernames"
 

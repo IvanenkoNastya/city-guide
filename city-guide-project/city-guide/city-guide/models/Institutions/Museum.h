@@ -21,7 +21,8 @@ public:
 		Astronautic,
 		Ceramic,
 		Religion,
-		Virtual
+		Virtual,
+		Other
 	};
 
 	MuseumTypeEnum MuseumType;

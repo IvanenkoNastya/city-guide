@@ -77,6 +77,7 @@ namespace cityguide {
 			this->listBoxDistricts->Size = System::Drawing::Size(472, 251);
 			this->listBoxDistricts->TabIndex = 0;
 			this->listBoxDistricts->SelectedIndexChanged += gcnew System::EventHandler(this, &FormDistrict::listBoxDistricts_SelectedIndexChanged);
+			this->listBoxDistricts->DoubleClick += gcnew System::EventHandler(this, &FormDistrict::editDistrictToolStripMenuItem_Click);
 			// 
 			// buttonCancel
 			// 
