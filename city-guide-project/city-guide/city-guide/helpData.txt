@@ -8,6 +8,7 @@ This instruction provides information about possible ways of using this applicat
 
 All general-user function are possible to reach at the left side of the main menu.
 Admin users get more options such as creating, editing and deleting users, institutions, districts and transports that are positioned at the right side of the main menu.
+"Cancel" button leads you to the window you've been before and does not save changes
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -41,7 +42,11 @@ User instruction for general-purpose functions:
 		or
 		- double click at the institution
 
-- sort (!todo this instruction)
+- sort:
+	- at the main menu click "Sort"
+	- chose the type of object you want to see and sort from the tab at the top (institution, transport or district)
+	- click on button with criteria you want to get the list of items sorted
+	- click "reset" to see original list (the one in file (database))
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -52,13 +57,13 @@ User instruction for admin-only functions:
 	- to add new instance:
 		- at the strip menu at the top click "add"
 		- fill all fields and other types of input
-		- click "Save" to save or "Close" to discard changes
+		- click "Save" to save or "Cancel" to discard changes
 
 	- to edit an instance:
 		- click at the object you want to change in the list
 		- at the strip menu at the top click "edit" OR double click at the instance
 		- change the fields and other types of input
-		- click "Save" to save or "Close" to discard changes
+		- click "Save" to save or "Cancel" to discard changes
 
 	- to delete an instance:
 		- click at the object you want to change in the list
@@ -67,7 +72,7 @@ User instruction for admin-only functions:
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-	"Usernames"
+       Usernames
 
 "quiet-squirrel", "foggy-frog",
 "white-koala", "fish", and "oak",

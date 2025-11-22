@@ -108,6 +108,9 @@
     <ClInclude Include="Forms\Sort\FormSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Forms\FilterInstitutions\FormFilterInstitutions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

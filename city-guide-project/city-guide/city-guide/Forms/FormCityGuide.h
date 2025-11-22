@@ -7,6 +7,7 @@
 #include "FindAddress/FormFindAddress.h"
 #include "FindTransportByPlaces/FormFindTransportByPlaces.h"
 #include "Sort/FormSort.h"
+#include "FilterInstitutions/FormFilterInstitutions.h"
 #include "Login/FormLogin.h"
 #include "FormHelp.h"
 
@@ -62,6 +63,7 @@ namespace cityguide {
 	private: System::Windows::Forms::Button^ buttonFindTransportByPlaces;
 	private: System::Windows::Forms::Button^ buttonFindAddress;
 	private: System::Windows::Forms::Button^ buttonSort;
+	private: System::Windows::Forms::Button^ buttonFilterInstitutions;
 
 
 
@@ -87,6 +89,7 @@ namespace cityguide {
 		{
 			this->panelMenuAll = (gcnew System::Windows::Forms::Panel());
 			this->panelGeneral = (gcnew System::Windows::Forms::Panel());
+			this->buttonSort = (gcnew System::Windows::Forms::Button());
 			this->buttonFindAddress = (gcnew System::Windows::Forms::Button());
 			this->buttonFindTransportByPlaces = (gcnew System::Windows::Forms::Button());
 			this->panelAdmin = (gcnew System::Windows::Forms::Panel());
@@ -97,7 +100,7 @@ namespace cityguide {
 			this->labelMenu = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->buttonSort = (gcnew System::Windows::Forms::Button());
+			this->buttonFilterInstitutions = (gcnew System::Windows::Forms::Button());
 			this->panelMenuAll->SuspendLayout();
 			this->panelGeneral->SuspendLayout();
 			this->panelAdmin->SuspendLayout();
@@ -116,6 +119,7 @@ namespace cityguide {
 			// 
 			// panelGeneral
 			// 
+			this->panelGeneral->Controls->Add(this->buttonFilterInstitutions);
 			this->panelGeneral->Controls->Add(this->buttonSort);
 			this->panelGeneral->Controls->Add(this->buttonFindAddress);
 			this->panelGeneral->Controls->Add(this->buttonFindTransportByPlaces);
@@ -124,9 +128,19 @@ namespace cityguide {
 			this->panelGeneral->Size = System::Drawing::Size(229, 190);
 			this->panelGeneral->TabIndex = 4;
 			// 
+			// buttonSort
+			// 
+			this->buttonSort->Location = System::Drawing::Point(24, 108);
+			this->buttonSort->Name = L"buttonSort";
+			this->buttonSort->Size = System::Drawing::Size(179, 23);
+			this->buttonSort->TabIndex = 3;
+			this->buttonSort->Text = L"Sort";
+			this->buttonSort->UseVisualStyleBackColor = true;
+			this->buttonSort->Click += gcnew System::EventHandler(this, &FormCityGuide::buttonSort_Click);
+			// 
 			// buttonFindAddress
 			// 
-			this->buttonFindAddress->Location = System::Drawing::Point(29, 109);
+			this->buttonFindAddress->Location = System::Drawing::Point(24, 80);
 			this->buttonFindAddress->Name = L"buttonFindAddress";
 			this->buttonFindAddress->Size = System::Drawing::Size(179, 23);
 			this->buttonFindAddress->TabIndex = 2;
@@ -136,7 +150,7 @@ namespace cityguide {
 			// 
 			// buttonFindTransportByPlaces
 			// 
-			this->buttonFindTransportByPlaces->Location = System::Drawing::Point(29, 50);
+			this->buttonFindTransportByPlaces->Location = System::Drawing::Point(24, 21);
 			this->buttonFindTransportByPlaces->Name = L"buttonFindTransportByPlaces";
 			this->buttonFindTransportByPlaces->Size = System::Drawing::Size(179, 52);
 			this->buttonFindTransportByPlaces->TabIndex = 1;
@@ -158,7 +172,7 @@ namespace cityguide {
 			// 
 			// buttonManageDistricts
 			// 
-			this->buttonManageDistricts->Location = System::Drawing::Point(15, 108);
+			this->buttonManageDistricts->Location = System::Drawing::Point(24, 79);
 			this->buttonManageDistricts->Name = L"buttonManageDistricts";
 			this->buttonManageDistricts->Size = System::Drawing::Size(179, 23);
 			this->buttonManageDistricts->TabIndex = 2;
@@ -168,7 +182,7 @@ namespace cityguide {
 			// 
 			// buttonManageTransport
 			// 
-			this->buttonManageTransport->Location = System::Drawing::Point(15, 79);
+			this->buttonManageTransport->Location = System::Drawing::Point(24, 50);
 			this->buttonManageTransport->Name = L"buttonManageTransport";
 			this->buttonManageTransport->Size = System::Drawing::Size(179, 23);
 			this->buttonManageTransport->TabIndex = 1;
@@ -178,7 +192,7 @@ namespace cityguide {
 			// 
 			// buttonManageInstitutions
 			// 
-			this->buttonManageInstitutions->Location = System::Drawing::Point(15, 137);
+			this->buttonManageInstitutions->Location = System::Drawing::Point(24, 108);
 			this->buttonManageInstitutions->Name = L"buttonManageInstitutions";
 			this->buttonManageInstitutions->Size = System::Drawing::Size(179, 23);
 			this->buttonManageInstitutions->TabIndex = 4;
@@ -188,7 +202,7 @@ namespace cityguide {
 			// 
 			// buttonManageUsers
 			// 
-			this->buttonManageUsers->Location = System::Drawing::Point(15, 50);
+			this->buttonManageUsers->Location = System::Drawing::Point(24, 21);
 			this->buttonManageUsers->Name = L"buttonManageUsers";
 			this->buttonManageUsers->Size = System::Drawing::Size(179, 23);
 			this->buttonManageUsers->TabIndex = 0;
@@ -221,15 +235,15 @@ namespace cityguide {
 			this->helpToolStripMenuItem->Text = L"Help";
 			this->helpToolStripMenuItem->Click += gcnew System::EventHandler(this, &FormCityGuide::helpToolStripMenuItem_Click);
 			// 
-			// buttonSort
+			// buttonFilterInstitutions
 			// 
-			this->buttonSort->Location = System::Drawing::Point(29, 137);
-			this->buttonSort->Name = L"buttonSort";
-			this->buttonSort->Size = System::Drawing::Size(179, 23);
-			this->buttonSort->TabIndex = 3;
-			this->buttonSort->Text = L"Sort";
-			this->buttonSort->UseVisualStyleBackColor = true;
-			this->buttonSort->Click += gcnew System::EventHandler(this, &FormCityGuide::buttonSort_Click);
+			this->buttonFilterInstitutions->Location = System::Drawing::Point(24, 138);
+			this->buttonFilterInstitutions->Name = L"buttonFilterInstitutions";
+			this->buttonFilterInstitutions->Size = System::Drawing::Size(179, 23);
+			this->buttonFilterInstitutions->TabIndex = 4;
+			this->buttonFilterInstitutions->Text = L"Filter institutions";
+			this->buttonFilterInstitutions->UseVisualStyleBackColor = true;
+			this->buttonFilterInstitutions->Click += gcnew System::EventHandler(this, &FormCityGuide::buttonFilterInstitutions_Click);
 			// 
 			// FormCityGuide
 			// 
@@ -295,6 +309,11 @@ namespace cityguide {
 
 	private: System::Void buttonSort_Click(System::Object^ sender, System::EventArgs^ e) {
 		FormSort^ form = gcnew FormSort();
+		form->ShowDialog();
+	}
+
+	private: System::Void buttonFilterInstitutions_Click(System::Object^ sender, System::EventArgs^ e) {
+		FormFilterInstitutions^ form = gcnew FormFilterInstitutions();
 		form->ShowDialog();
 	}
 };
