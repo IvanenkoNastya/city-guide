@@ -13,6 +13,7 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for FormUserManager
+	/// Form allows admin to add, edit and remove users (except for itself)
 	/// </summary>
 	public ref class FormUserManager : public System::Windows::Forms::Form
 	{

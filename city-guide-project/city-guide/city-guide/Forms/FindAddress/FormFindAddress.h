@@ -14,6 +14,7 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for FormFindAddress
+	/// Form to find address of institution that can previously be filtered by district
 	/// </summary>
 	public ref class FormFindAddress : public System::Windows::Forms::Form
 	{

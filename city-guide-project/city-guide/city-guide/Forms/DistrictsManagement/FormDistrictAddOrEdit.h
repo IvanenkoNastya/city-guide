@@ -13,6 +13,7 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for FormDistrictAddOrEdit
+	/// Form for input data to add/edit district
 	/// </summary>
 	public ref class FormDistrictAddOrEdit : public System::Windows::Forms::Form
 	{

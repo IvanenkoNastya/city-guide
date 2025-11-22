@@ -13,6 +13,7 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for FormInstitution
+	/// Form allows admin to add, edit and remove institutions, as well as see them
 	/// </summary>
 	public ref class FormInstitution : public System::Windows::Forms::Form
 	{

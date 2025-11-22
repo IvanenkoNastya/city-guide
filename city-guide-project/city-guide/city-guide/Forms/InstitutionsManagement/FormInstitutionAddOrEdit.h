@@ -13,6 +13,7 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for FormInstitutionAddOrEdit
+	/// Form for input data to add/edit institution of particular type
 	/// </summary>
 	public ref class FormInstitutionAddOrEdit : public System::Windows::Forms::Form
 	{

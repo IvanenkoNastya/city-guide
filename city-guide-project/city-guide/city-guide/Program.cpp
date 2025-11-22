@@ -9,7 +9,9 @@ using namespace System;
 using namespace System::Windows::Forms;
 using namespace cityguide;
 
-
+// This is main method
+// Loads all files that user would need while using the application
+// Starts Menu form and runs application
 [STAThreadAttribute]
 int main(array<String^>^ args) {
 	Application::EnableVisualStyles();

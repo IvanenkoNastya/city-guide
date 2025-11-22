@@ -15,6 +15,8 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for FormLogin
+	/// Login form with entries for username and password,
+	/// as well as method to call other classes' properties to login or decline login attempt
 	/// </summary>
 	public ref class FormLogin : public System::Windows::Forms::Form
 	{

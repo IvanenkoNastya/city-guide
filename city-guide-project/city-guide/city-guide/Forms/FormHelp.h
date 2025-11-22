@@ -12,6 +12,7 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for FormHelp
+	/// User instruction
 	/// </summary>
 	public ref class FormHelp : public System::Windows::Forms::Form
 	{

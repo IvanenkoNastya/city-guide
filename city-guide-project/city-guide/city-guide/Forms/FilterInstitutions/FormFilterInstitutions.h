@@ -11,6 +11,7 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for FormFilterInstitutions
+	/// Form to filter institutions by transport, as well as serch them by name or address
 	/// </summary>
 	public ref class FormFilterInstitutions : public System::Windows::Forms::Form
 	{

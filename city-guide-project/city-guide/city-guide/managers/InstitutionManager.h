@@ -16,6 +16,9 @@ using namespace System::Collections::Generic;
 using namespace System::IO;
 using namespace Newtonsoft::Json;
 
+// institution manager interacts with Institution objects
+// interacts with file "institutions.json" where institutions are stored
+// this manager interacts is called from different places where Institution objects or their properties are in need
 ref class InstitutionManager {
 public:
 	static InstitutionManager^ Instance = gcnew InstitutionManager();

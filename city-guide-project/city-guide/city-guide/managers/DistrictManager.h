@@ -5,6 +5,9 @@ using namespace System::Collections::Generic;
 using namespace System::IO;
 using namespace Newtonsoft::Json;
 
+// district manager interacts with districts that are represented as String^ in Institution object
+// stores list of districts as list of strings
+// interacts with file "districts.json"
 ref class DistrictManager {
 public:
 	static DistrictManager^ Instance = gcnew DistrictManager();

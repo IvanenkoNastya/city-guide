@@ -17,6 +17,7 @@ public enum class InstitutionTypeEnum {
 	Mall
 };
 
+// parent class for all institutions (museums, libraries, etc.)
 ref class Institution abstract {
 public:
 	String^ Name;

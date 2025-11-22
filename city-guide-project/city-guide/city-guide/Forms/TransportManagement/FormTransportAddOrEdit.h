@@ -13,6 +13,7 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for FormTransportAddOrEdit
+	/// Form for input data to add/edit transport
 	/// </summary>
 	public ref class FormTransportAddOrEdit : public System::Windows::Forms::Form
 	{

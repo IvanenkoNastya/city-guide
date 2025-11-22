@@ -7,6 +7,9 @@ using namespace System::Collections::Generic;
 using namespace System::IO;
 using namespace Newtonsoft::Json;
 
+// transport manager interacts with Transport objects
+// stores list of transports
+// interacts with file "transports.json" where Transport objects are stored
 ref class TransportManager {
 public:
 	static TransportManager^ Instance = gcnew TransportManager();

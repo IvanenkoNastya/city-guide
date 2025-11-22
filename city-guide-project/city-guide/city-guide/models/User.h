@@ -1,6 +1,7 @@
 #pragma once
 using namespace System;
 
+// class representing info about user
 ref class User {
 	public:
 		bool IsAdmin;

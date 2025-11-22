@@ -12,6 +12,7 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for FormFindTransportByPlaces
+	/// Form to find transports that connect two institutions
 	/// </summary>
 	public ref class FormFindTransportByPlaces : public System::Windows::Forms::Form
 	{

@@ -81,6 +81,10 @@ User instruction for admin-only functions:
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
+If something doesn't working, try entering adequate data.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
        Usernames
 
 "quiet-squirrel", "foggy-frog",

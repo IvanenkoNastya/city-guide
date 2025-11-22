@@ -13,6 +13,7 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for FormDistrict
+	/// Form allows admin to add, edit and remove districts
 	/// </summary>
 	public ref class FormDistrict : public System::Windows::Forms::Form
 	{

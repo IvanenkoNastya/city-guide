@@ -1,6 +1,7 @@
 #pragma once
 using namespace System;
 
+// class representing a viechle object that can be assigned to any institution as its property
 ref class Transport {
 public:
 	enum class TransportTypeEnum {

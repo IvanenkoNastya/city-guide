@@ -11,6 +11,7 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for FormSort
+	/// Presents various criteria to sort institutions, transports and districts
 	/// </summary>
 	public ref class FormSort : public System::Windows::Forms::Form
 	{

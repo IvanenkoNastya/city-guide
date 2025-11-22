@@ -13,6 +13,7 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for FormTransport
+	/// Form allows admin to add, edit and remove transports
 	/// </summary>
 	public ref class FormTransport : public System::Windows::Forms::Form
 	{

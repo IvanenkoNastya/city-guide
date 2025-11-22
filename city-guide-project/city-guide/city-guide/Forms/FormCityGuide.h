@@ -22,6 +22,9 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for CityGuide
+	/// Main form of the project. Menu.
+	/// Provides possibility to swith to other forms to do everything thos project can do.
+	/// Also provides possibility to get to the "help" form with user instruction
 	/// </summary>
 	public ref class FormCityGuide : public System::Windows::Forms::Form
 	{

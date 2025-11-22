@@ -12,6 +12,7 @@ namespace cityguide {
 
 	/// <summary>
 	/// Summary for FormUserAddOrEdit
+	/// Form for input data to add/edit user
 	/// </summary>
 	public ref class FormUserAddOrEdit : public System::Windows::Forms::Form
 	{

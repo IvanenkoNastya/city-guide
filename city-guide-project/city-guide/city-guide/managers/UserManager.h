@@ -4,6 +4,9 @@ using namespace System;
 using namespace System::Collections::Generic;
 using namespace System::IO;
 
+// user manager works with users and file "users.txt"
+// stores private list of users
+// gives possibilities to interact with User object
 ref class UserManager {
 public:
 	static UserManager^ Instance = gcnew UserManager();
