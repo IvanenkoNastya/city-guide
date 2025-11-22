@@ -49,7 +49,8 @@ namespace cityguide {
 	private: System::Windows::Forms::TabControl^ tabControl1;
 	private: System::Windows::Forms::TabPage^ tabPageTransport;
 	private: System::Windows::Forms::TabPage^ tabPageAddress;
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ textBoxSearchInput;
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ buttonReset;
 
@@ -82,7 +83,7 @@ namespace cityguide {
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPageTransport = (gcnew System::Windows::Forms::TabPage());
 			this->tabPageAddress = (gcnew System::Windows::Forms::TabPage());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxSearchInput = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->buttonReset = (gcnew System::Windows::Forms::Button());
 			this->tabControl1->SuspendLayout();
@@ -172,32 +173,32 @@ namespace cityguide {
 			// 
 			// tabPageAddress
 			// 
-			this->tabPageAddress->Controls->Add(this->textBox1);
+			this->tabPageAddress->Controls->Add(this->textBoxSearchInput);
 			this->tabPageAddress->Controls->Add(this->label1);
 			this->tabPageAddress->Location = System::Drawing::Point(4, 22);
 			this->tabPageAddress->Name = L"tabPageAddress";
 			this->tabPageAddress->Padding = System::Windows::Forms::Padding(3);
 			this->tabPageAddress->Size = System::Drawing::Size(464, 57);
 			this->tabPageAddress->TabIndex = 1;
-			this->tabPageAddress->Text = L"Search by address";
+			this->tabPageAddress->Text = L"Search by name or address";
 			this->tabPageAddress->UseVisualStyleBackColor = true;
 			// 
-			// textBox1
+			// textBoxSearchInput
 			// 
-			this->textBox1->Location = System::Drawing::Point(8, 27);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(450, 20);
-			this->textBox1->TabIndex = 1;
+			this->textBoxSearchInput->Location = System::Drawing::Point(8, 27);
+			this->textBoxSearchInput->Name = L"textBoxSearchInput";
+			this->textBoxSearchInput->Size = System::Drawing::Size(450, 20);
+			this->textBoxSearchInput->TabIndex = 1;
+			this->textBoxSearchInput->TextChanged += gcnew System::EventHandler(this, &FormFilterInstitutions::textBoxSearchInput_TextChanged);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Location = System::Drawing::Point(16, 8);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(399, 13);
+			this->label1->Size = System::Drawing::Size(69, 13);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"Start typing address to find institutions containing what you wnter here in its a"
-				L"ddress";
+			this->label1->Text = L"Start typing...";
 			// 
 			// buttonReset
 			// 
@@ -296,6 +297,17 @@ namespace cityguide {
 
 	private: System::Void comboBoxTransport_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 		UpdateInstitutionListBoxTransports();
+	}
+
+	private: System::Void textBoxSearchInput_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		List<Institution^>^ newListOfInstitutions = gcnew List<Institution^>();
+		for each (Institution^ institution in InstitutionManager::Instance->GetInstitutionList()) {
+			if (institution->Name->Contains(textBoxSearchInput->Text) || institution->Address->Contains(textBoxSearchInput->Text)) {
+				newListOfInstitutions->Add(institution);
+			}
+		}
+		listBoxInstitutions->Items->Clear();
+		listBoxInstitutions->Items->AddRange(newListOfInstitutions->ToArray());
 	}
 };
 }
