@@ -206,7 +206,5 @@ namespace cityguide {
 			RefreshInstitutionListBox();
 		}
 	}
-
-
 };
 }

@@ -6,11 +6,11 @@ public:
 	enum class TransportTypeEnum {
 		Unknown = 0,
 		Bus,
+		Trolleybus,
 		Tram,
 		Metro,
-		Trolleybus,
-		Train,
 		Funicular,
+		Train,
 		Ferry,
 		Helicopter
 	};
@@ -45,3 +45,16 @@ public:
 	}
 };
 
+public ref class CompareTransportsByName : System::Collections::Generic::Comparer<Transport^> {
+public:
+	virtual int Compare(Transport^ a, Transport^ b) override {
+		return a->Name->CompareTo(b->Name);
+	}
+};
+
+public ref class CompareTransportsByType : System::Collections::Generic::Comparer<Transport^> {
+public:
+	virtual int Compare(Transport^ a, Transport^ b) override {
+		return a->TransportType.CompareTo(b->TransportType);
+	}
+};

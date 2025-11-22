@@ -1,6 +1,7 @@
 #pragma once
 
 using namespace System;
+using namespace System::Collections::Generic;
 
 public enum class InstitutionTypeEnum {
 	Unknown = 0,
@@ -54,6 +55,18 @@ public:
 		Address = address;
 	}
 
+	String^ GetNameWithTransportsAmount() {
+		String^ res = ToString() + "; " + TransportList->Count + " transport";
+		if (TransportList->Count != 1) {
+			res += "s";
+		}
+		return res;
+	}
+
+	String^ GetNameWithDistrict() {
+		return ToString() + "; " + District->ToString() + " district";
+	}
+
 	virtual String^ ToString() override {
 		return InstitutionType.ToString() + ": " + Name;
 	}
@@ -67,3 +80,32 @@ public:
 	}
 };
 
+public ref class CompareInstitutionsByName : System::Collections::Generic::Comparer<Institution^> {
+public:
+	virtual int Compare(Institution^ a, Institution^ b) override {
+		return a->Name->CompareTo(b->Name);
+	}
+};
+
+public ref class CompareInstitutionsByAmountOfTransports : System::Collections::Generic::Comparer<Institution^> {
+public:
+	virtual int Compare(Institution^ a, Institution^ b) override {
+		int aTransports = a->TransportList->Count;
+		int bTransports = b->TransportList->Count;
+		return aTransports.CompareTo(bTransports);
+	}
+};
+
+public ref class CompareInstitutionsByType : System::Collections::Generic::Comparer<Institution^> {
+public:
+	virtual int Compare(Institution^ a, Institution^ b) override {
+		return a->InstitutionType.CompareTo(b->InstitutionType);
+	}
+};
+
+public ref class CompareInstitutionsByDistrict : System::Collections::Generic::Comparer<Institution^> {
+public:
+	virtual int Compare(Institution^ a, Institution^ b) override {
+		return a->District->CompareTo(b->District);
+	}
+};

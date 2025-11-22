@@ -20,6 +20,7 @@ namespace cityguide {
 		FormTransport(void)
 		{
 			InitializeComponent();
+			listBoxTransports->ColumnWidth = 230;
 
 			RefreshTransportListBox();
 		}

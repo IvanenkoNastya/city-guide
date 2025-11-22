@@ -150,6 +150,9 @@
     <ClInclude Include="Forms\Login\FormLogin.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Forms\Sort\FormSort.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Forms\TransportManagement\FormTransport.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -219,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login\FormLogin.resx">
       <DependentUpon>Forms\Login\FormLogin.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sort\FormSort.resx">
+      <DependentUpon>Forms\Sort\FormSort.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TransportManagement\FormTransport.resx">
       <DependentUpon>Forms\TransportManagement\FormTransport.h</DependentUpon>

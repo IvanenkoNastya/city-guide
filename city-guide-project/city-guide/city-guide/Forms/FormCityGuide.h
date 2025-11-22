@@ -6,6 +6,7 @@
 #include "InstitutionsManagement/FormInstitution.h"
 #include "FindAddress/FormFindAddress.h"
 #include "FindTransportByPlaces/FormFindTransportByPlaces.h"
+#include "Sort/FormSort.h"
 #include "Login/FormLogin.h"
 #include "FormHelp.h"
 
@@ -60,6 +61,7 @@ namespace cityguide {
 	private: System::Windows::Forms::Button^ buttonManageDistricts;
 	private: System::Windows::Forms::Button^ buttonFindTransportByPlaces;
 	private: System::Windows::Forms::Button^ buttonFindAddress;
+	private: System::Windows::Forms::Button^ buttonSort;
 
 
 
@@ -95,6 +97,7 @@ namespace cityguide {
 			this->labelMenu = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->buttonSort = (gcnew System::Windows::Forms::Button());
 			this->panelMenuAll->SuspendLayout();
 			this->panelGeneral->SuspendLayout();
 			this->panelAdmin->SuspendLayout();
@@ -113,6 +116,7 @@ namespace cityguide {
 			// 
 			// panelGeneral
 			// 
+			this->panelGeneral->Controls->Add(this->buttonSort);
 			this->panelGeneral->Controls->Add(this->buttonFindAddress);
 			this->panelGeneral->Controls->Add(this->buttonFindTransportByPlaces);
 			this->panelGeneral->Location = System::Drawing::Point(4, 43);
@@ -217,6 +221,16 @@ namespace cityguide {
 			this->helpToolStripMenuItem->Text = L"Help";
 			this->helpToolStripMenuItem->Click += gcnew System::EventHandler(this, &FormCityGuide::helpToolStripMenuItem_Click);
 			// 
+			// buttonSort
+			// 
+			this->buttonSort->Location = System::Drawing::Point(29, 137);
+			this->buttonSort->Name = L"buttonSort";
+			this->buttonSort->Size = System::Drawing::Size(179, 23);
+			this->buttonSort->TabIndex = 3;
+			this->buttonSort->Text = L"Sort";
+			this->buttonSort->UseVisualStyleBackColor = true;
+			this->buttonSort->Click += gcnew System::EventHandler(this, &FormCityGuide::buttonSort_Click);
+			// 
 			// FormCityGuide
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -276,6 +290,11 @@ namespace cityguide {
 
 	private: System::Void buttonFindTransportByPlaces_Click(System::Object^ sender, System::EventArgs^ e) {
 		FormFindTransportByPlaces^ form = gcnew FormFindTransportByPlaces();
+		form->ShowDialog();
+	}
+
+	private: System::Void buttonSort_Click(System::Object^ sender, System::EventArgs^ e) {
+		FormSort^ form = gcnew FormSort();
 		form->ShowDialog();
 	}
 };
