@@ -174,7 +174,6 @@ namespace cityguide {
 		}
 	}
 	private: System::Void deleteDistrictToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		// to do: check if this District is used in any institution (and do smth with it)
 		System::Windows::Forms::DialogResult answer = MessageBox::Show("Are you sure?", "Delete District", MessageBoxButtons::YesNo, MessageBoxIcon::Question);
 		if (answer == System::Windows::Forms::DialogResult::Yes) {
 			String^ districtToDelete = dynamic_cast<String^>(listBoxDistricts->SelectedItem);

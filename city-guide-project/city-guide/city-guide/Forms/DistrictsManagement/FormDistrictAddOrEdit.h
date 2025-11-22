@@ -20,9 +20,6 @@ namespace cityguide {
 		FormDistrictAddOrEdit(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 		FormDistrictAddOrEdit(String^ selectedDistrict) {

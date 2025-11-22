@@ -250,20 +250,20 @@ namespace cityguide {
 			// 
 			// buttonSortTransportsByType
 			// 
-			this->buttonSortTransportsByType->Location = System::Drawing::Point(133, 6);
+			this->buttonSortTransportsByType->Location = System::Drawing::Point(52, 6);
 			this->buttonSortTransportsByType->Name = L"buttonSortTransportsByType";
 			this->buttonSortTransportsByType->Size = System::Drawing::Size(75, 23);
-			this->buttonSortTransportsByType->TabIndex = 4;
+			this->buttonSortTransportsByType->TabIndex = 3;
 			this->buttonSortTransportsByType->Text = L"Type";
 			this->buttonSortTransportsByType->UseVisualStyleBackColor = true;
 			this->buttonSortTransportsByType->Click += gcnew System::EventHandler(this, &FormSort::buttonSortTransportsByType_Click);
 			// 
 			// buttonSortTransportsByName
 			// 
-			this->buttonSortTransportsByName->Location = System::Drawing::Point(52, 6);
+			this->buttonSortTransportsByName->Location = System::Drawing::Point(133, 6);
 			this->buttonSortTransportsByName->Name = L"buttonSortTransportsByName";
 			this->buttonSortTransportsByName->Size = System::Drawing::Size(75, 23);
-			this->buttonSortTransportsByName->TabIndex = 3;
+			this->buttonSortTransportsByName->TabIndex = 4;
 			this->buttonSortTransportsByName->Text = L"Name";
 			this->buttonSortTransportsByName->UseVisualStyleBackColor = true;
 			this->buttonSortTransportsByName->Click += gcnew System::EventHandler(this, &FormSort::buttonSortTransportsByName_Click);

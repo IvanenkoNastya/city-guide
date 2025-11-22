@@ -17,7 +17,7 @@ public enum class InstitutionTypeEnum {
 	Mall
 };
 
-ref class Institution {
+ref class Institution abstract {
 public:
 	String^ Name;
 	InstitutionTypeEnum InstitutionType;

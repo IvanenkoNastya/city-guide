@@ -21,12 +21,13 @@ namespace cityguide {
 
 			RefreshInstitutionListBox();
 
-
 			for each (Object^ transportType in Enum::GetValues(Transport::TransportTypeEnum::typeid)) {
 				if ((Transport::TransportTypeEnum)transportType != Transport::TransportTypeEnum::Unknown) {
 					comboBoxTransportType->Items->Add(transportType);
 				}
 			}
+
+			SetTransportsDropdown();
 		}
 
 	protected:
@@ -53,11 +54,6 @@ namespace cityguide {
 
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ buttonReset;
-
-
-
-
-	protected:
 
 	protected:
 
@@ -236,30 +232,31 @@ namespace cityguide {
 		listBoxInstitutions->Items->Clear();
 		listBoxInstitutions->Items->AddRange(InstitutionManager::Instance->GetInstitutionList()->ToArray());
 		comboBoxTransportType->SelectedItem = nullptr;
+		comboBoxTransport->SelectedItem = nullptr;
 	}
 
 	private: void UpdateInstitutionListBoxTransports() {
 		listBoxInstitutions->Items->Clear();
-		if (comboBoxTransportType->SelectedItem == nullptr) {
+		if (comboBoxTransportType->SelectedItem == nullptr && comboBoxTransport->SelectedItem == nullptr) {
 			RefreshInstitutionListBox();
-		} else if (comboBoxTransport->SelectedItem == nullptr) {
-			// show institutions with selected transport type
-			Transport::TransportTypeEnum selectedTransportType = (Transport::TransportTypeEnum)comboBoxTransportType->SelectedItem;
-			for each (Institution^ institution in InstitutionManager::Instance->GetInstitutionList()) {
-				for each (Transport^ transport in institution->TransportList) {
-					if (transport->TransportType == selectedTransportType) {
-						listBoxInstitutions->Items->Add(institution);
-						break;
-					}
-				}
-			}
-		} else {
+		} else if (comboBoxTransport->SelectedItem != nullptr) {
 			// show institutions with selected transport
 			Transport^ selectedTransport = (Transport^)comboBoxTransport->SelectedItem;
 			for each (Institution ^ institution in InstitutionManager::Instance->GetInstitutionList()) {
 				for each (Transport ^ transport in institution->TransportList) {
 					if (transport->Equals(selectedTransport)) {
 						listBoxInstitutions->Items->Add(institution);
+					}
+				}
+			}
+		} else if (comboBoxTransportType->SelectedItem != nullptr) {
+			// show institutions with selected transport type
+			Transport::TransportTypeEnum selectedTransportType = (Transport::TransportTypeEnum)comboBoxTransportType->SelectedItem;
+			for each (Institution ^ institution in InstitutionManager::Instance->GetInstitutionList()) {
+				for each (Transport ^ transport in institution->TransportList) {
+					if (transport->TransportType == selectedTransportType) {
+						listBoxInstitutions->Items->Add(institution);
+						break;
 					}
 				}
 			}
@@ -299,11 +296,17 @@ namespace cityguide {
 		UpdateInstitutionListBoxTransports();
 	}
 
+	// search by text from textbox
 	private: System::Void textBoxSearchInput_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 		List<Institution^>^ newListOfInstitutions = gcnew List<Institution^>();
 		for each (Institution^ institution in InstitutionManager::Instance->GetInstitutionList()) {
-			if (institution->Name->Contains(textBoxSearchInput->Text) || institution->Address->Contains(textBoxSearchInput->Text)) {
-				newListOfInstitutions->Add(institution);
+			array<String^>^ stringsInput = textBoxSearchInput->Text->ToLower()->Split(
+				gcnew array<Char> {' ', ',', ';'}, StringSplitOptions::RemoveEmptyEntries
+			);
+			for each (String^ strInput in stringsInput) {
+				if (institution->Name->ToLower()->Contains(strInput) || institution->Address->ToLower()->Contains(strInput)) {
+					newListOfInstitutions->Add(institution);
+				}
 			}
 		}
 		listBoxInstitutions->Items->Clear();

@@ -44,9 +44,18 @@ User instruction for general-purpose functions:
 
 - sort:
 	- at the main menu click "Sort"
-	- chose the type of object you want to see and sort from the tab at the top (institution, transport or district)
+	- chose the type of object you want to see and sort from the tab at the top 
+	(institution, transport or district)
 	- click on button with criteria you want to get the list of items sorted
 	- click "reset" to see original list (the one in file (database))
+
+- filter and search institutions by some criteria:
+	- at the main menu click "Filter institutions"
+	- first tab at the top allows to filter institutions by transport that can be easily reached
+	from there:
+		- chose transport type and/or exact transport
+	- second tab allows you to search for institution by typing words or phrases that 
+	institution name or its address contains
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

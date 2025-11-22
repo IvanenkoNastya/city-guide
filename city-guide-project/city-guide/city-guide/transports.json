@@ -94,5 +94,9 @@
   {
     "Name": "Intercity GreenCity-OrangeCity",
     "TransportType": 1
+  },
+  {
+    "Name": "new not used",
+    "TransportType": 6
   }
 ]

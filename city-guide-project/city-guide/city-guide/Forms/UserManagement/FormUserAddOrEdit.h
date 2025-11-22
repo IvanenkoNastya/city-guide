@@ -19,9 +19,6 @@ namespace cityguide {
 		FormUserAddOrEdit(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 		FormUserAddOrEdit(String^ userToEditStr) {
