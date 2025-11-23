@@ -231,6 +231,7 @@ namespace cityguide {
 #pragma endregion
 	private: void RefreshInstitutionListBox() {
 		listBoxInstitutions->Items->Clear();
+		textBoxSearchInput->Text = "";
 		listBoxInstitutions->Items->AddRange(InstitutionManager::Instance->GetInstitutionList()->ToArray());
 		comboBoxTransportType->SelectedItem = nullptr;
 		comboBoxTransport->SelectedItem = nullptr;

@@ -96,7 +96,6 @@ namespace cityguide {
 			this->textBoxUsername->Name = L"textBoxUsername";
 			this->textBoxUsername->Size = System::Drawing::Size(190, 20);
 			this->textBoxUsername->TabIndex = 1;
-			this->textBoxUsername->Text = L"default-username";
 			// 
 			// labelUsername
 			// 
@@ -123,7 +122,6 @@ namespace cityguide {
 			this->textBoxPassword->PasswordChar = '*';
 			this->textBoxPassword->Size = System::Drawing::Size(190, 20);
 			this->textBoxPassword->TabIndex = 1;
-			this->textBoxPassword->Text = L"password";
 			// 
 			// labelPassword
 			// 

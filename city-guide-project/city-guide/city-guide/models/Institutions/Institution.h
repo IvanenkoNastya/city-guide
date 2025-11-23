@@ -17,7 +17,7 @@ public enum class InstitutionTypeEnum {
 	Mall
 };
 
-// parent class for all institutions (museums, libraries, etc.)
+// Parent class for all institutions (museums, libraries, etc.)
 ref class Institution abstract {
 public:
 	String^ Name;
@@ -70,14 +70,6 @@ public:
 
 	virtual String^ ToString() override {
 		return InstitutionType.ToString() + ": " + Name;
-	}
-
-	static InstitutionTypeEnum GetTranportTypeEnum(String^ institutionTypeStr) {
-		InstitutionTypeEnum result;
-		if (!Enum::TryParse<InstitutionTypeEnum>(institutionTypeStr, result)) {
-			return InstitutionTypeEnum::Unknown;
-		}
-		return result;
 	}
 };
 

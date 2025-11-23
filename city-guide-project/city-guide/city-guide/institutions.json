@@ -28,7 +28,7 @@
         "TransportType": 1
       },
       {
-        "Name": "4",
+        "Name": "4A",
         "TransportType": 4
       },
       {
@@ -50,7 +50,7 @@
   {
     "$type": "Museum, city-guide",
     "MuseumType": 4,
-    "Name": "Open sky museum",
+    "Name": "Open sky museum 1",
     "InstitutionType": 3,
     "TransportList": [
       {
@@ -114,7 +114,7 @@
         "TransportType": 1
       },
       {
-        "Name": "4",
+        "Name": "4A",
         "TransportType": 4
       },
       {
@@ -127,7 +127,7 @@
   },
   {
     "$type": "Hospital, city-guide",
-    "HospitalType": 1,
+    "HospitalType": 0,
     "Name": "Medical care",
     "InstitutionType": 6,
     "TransportList": [
@@ -137,6 +137,10 @@
       },
       {
         "Name": "3",
+        "TransportType": 4
+      },
+      {
+        "Name": "5",
         "TransportType": 4
       },
       {
@@ -191,7 +195,7 @@
   },
   {
     "$type": "School, city-guide",
-    "NumberOfFaculties": 2,
+    "NumberOfFaculties": 4,
     "Name": "Physics and Mathematics Lyceum Number 1",
     "InstitutionType": 9,
     "TransportList": [
@@ -208,7 +212,7 @@
         "TransportType": 1
       },
       {
-        "Name": "4",
+        "Name": "4A",
         "TransportType": 4
       }
     ],
@@ -235,7 +239,7 @@
   },
   {
     "$type": "Library, city-guide",
-    "IsUniversityLibrary": true,
+    "IsUniversityLibrary": false,
     "Name": "GreenTown University Library",
     "InstitutionType": 5,
     "TransportList": [
@@ -259,7 +263,7 @@
     "$type": "Mall, city-guide",
     "HasParking": true,
     "HasGrocery": true,
-    "HasEntertainmentCenter": false,
+    "HasEntertainmentCenter": true,
     "Name": "Great items",
     "InstitutionType": 10,
     "TransportList": [
@@ -268,7 +272,7 @@
         "TransportType": 1
       },
       {
-        "Name": "4",
+        "Name": "4A",
         "TransportType": 4
       },
       {
@@ -298,7 +302,7 @@
         "TransportType": 1
       },
       {
-        "Name": "4",
+        "Name": "4A",
         "TransportType": 4
       },
       {
@@ -326,6 +330,10 @@
       {
         "Name": "5",
         "TransportType": 4
+      },
+      {
+        "Name": "1",
+        "TransportType": 7
       }
     ],
     "District": "Downtown",
@@ -333,7 +341,7 @@
   },
   {
     "$type": "School, city-guide",
-    "NumberOfFaculties": 16,
+    "NumberOfFaculties": 15,
     "Name": "Greentown University",
     "InstitutionType": 9,
     "TransportList": [
@@ -350,6 +358,10 @@
         "TransportType": 4
       },
       {
+        "Name": "218",
+        "TransportType": 2
+      },
+      {
         "Name": "5",
         "TransportType": 3
       }
@@ -359,7 +371,7 @@
   },
   {
     "$type": "Theatre, city-guide",
-    "HasOrchestra": false,
+    "HasOrchestra": true,
     "Name": "Drama theatre",
     "InstitutionType": 4,
     "TransportList": [
@@ -392,5 +404,31 @@
     ],
     "District": "Suburb",
     "Address": "Suburbs of Greentown"
+  },
+  {
+    "$type": "School, city-guide",
+    "NumberOfFaculties": 6,
+    "Name": "The Great School of Greentown",
+    "InstitutionType": 9,
+    "TransportList": [
+      {
+        "Name": "13",
+        "TransportType": 1
+      },
+      {
+        "Name": "15A",
+        "TransportType": 1
+      },
+      {
+        "Name": "125",
+        "TransportType": 2
+      },
+      {
+        "Name": "3",
+        "TransportType": 6
+      }
+    ],
+    "District": "Downtown",
+    "Address": "15, Wisdom street, Greentown"
   }
 ]

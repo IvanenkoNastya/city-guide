@@ -24,7 +24,7 @@
     "TransportType": 4
   },
   {
-    "Name": "4",
+    "Name": "4A",
     "TransportType": 4
   },
   {
@@ -94,9 +94,5 @@
   {
     "Name": "Intercity GreenCity-OrangeCity",
     "TransportType": 1
-  },
-  {
-    "Name": "new not used",
-    "TransportType": 6
   }
 ]
