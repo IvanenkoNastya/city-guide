@@ -1,4 +1,6 @@
 # city-guide
+Coursework
+
 Database management system "City Guide"
 
 This is a coursework on "Data structures and algorithms"
